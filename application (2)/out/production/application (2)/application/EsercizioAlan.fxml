@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CostruzioneScenaAlan">
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="25.0" prefHeight="565.0" prefWidth="858.0" style="-fx-background-color: #8F00FF;">
+         <children>
+            <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="509.0" prefWidth="750.0" style="-fx-background-color: #F0F8FF;">
+               <children>
+                  <Text fill="#8f00ff" layoutX="294.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correggi l'errore">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="14.0" layoutY="38.0" prefHeight="216.0" prefWidth="291.0" style="-fx-background-color: #8F00FF;">
+                     <children>
+                        <Text layoutX="64.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facile" wrappingWidth="152.90191650390625">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="84.0" layoutY="143.0" mnemonicParsing="false" onAction="#ScenaEsercizioFacile" prefHeight="26.0" prefWidth="100.0" text="Inizia" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="444.0" layoutY="38.0" prefHeight="216.0" prefWidth="291.0" style="-fx-background-color: #8F00FF;">
+                     <children>
+                        <Text layoutX="64.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intermedio" wrappingWidth="152.90191650390625">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="96.0" layoutY="156.0" mnemonicParsing="false" onAction="#ScenaEsercizioIntermedio" prefHeight="26.0" prefWidth="100.0" text="Inizia" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="215.0" layoutY="265.0" prefHeight="216.0" prefWidth="291.0" style="-fx-background-color: #8F00FF;">
+                     <children>
+                        <Text layoutX="64.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Difficile" wrappingWidth="152.90191650390625">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="96.0" layoutY="157.0" mnemonicParsing="false" onAction="#ScenaEsercizioDificile" prefHeight="26.0" prefWidth="100.0" text="Inizia" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="612.0" layoutY="448.0" mnemonicParsing="false" onAction="#ScenaDashbord" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #8F00FF;" text="Indietro">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
