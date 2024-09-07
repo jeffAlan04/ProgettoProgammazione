@@ -24,7 +24,7 @@ public class EsercizioMedioA1 {
     @FXML
     public void initialize() {
 
-        String commento = "// Somma degli elementi in un array\n";
+        String commento = "// Inversione di una stringa\n";
 
         // Codice predefinito nell'area di testo
         String initialCode = "public class InvertiStringa {\n" +

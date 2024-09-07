@@ -6,26 +6,44 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.TextArea?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EsercizioMedioA1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0"
+            prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.EsercizioMedioA1">
    <children>
       <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="565.0" prefWidth="858.0" style="-fx-background-color: #8F00FF;">
          <children>
             <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="509.0" prefWidth="750.0" style="-fx-background-color: #F0F8FF;">
                <children>
-                  <!-- Commento che descrive il comportamento atteso -->
-                  <Text fill="#8f00ff" layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correggi il codice" wrappingWidth="650.0"/>
+
+                  <!-- Numero progressivo di esercizio -->
+                  <Text fill="#8f00ff" layoutX="50.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        text="Esercizio 1" wrappingWidth="650.0"/>
+
+                  <!-- Consegna dell'esercizio -->
+                  <Text fill="#8f00ff" layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        text="Correggi il codice" wrappingWidth="650.0"/>
 
                   <!-- Area di testo per il codice da correggere -->
-                  <TextArea fx:id="codeArea" layoutX="50.0" layoutY="80.0" prefHeight="300.0" prefWidth="650.0" style="-fx-font-family: 'Courier New';"/>
+                  <TextArea fx:id="codeArea" layoutX="50.0" layoutY="80.0" prefHeight="300.0" prefWidth="650.0"
+                            style="-fx-font-family: 'Courier New';"/>
 
                   <!-- Pulsante per verificare il codice -->
-                  <Button fx:id="verifyButton" layoutX="451.0" layoutY="400.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #8F00FF;" text="Verifica" />
+                  <Button fx:id="verifyButton" layoutX="451.0" layoutY="400.0" mnemonicParsing="false"
+                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #8F00FF;"
+                          text="Verifica"/>
+
+                  <!-- Pulsante Next -->
+                  <Button fx:id="nextButton" layoutX="604.0" layoutY="400.0" mnemonicParsing="false"
+                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #8F00FF;" text="Next"/>
 
                   <!-- Pulsante per uscire -->
-                  <Button layoutX="604.0" layoutY="400.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #8F00FF;" text="Esci" />
+                  <Button fx:id="esciButton" layoutX="50.0" layoutY="400.0" mnemonicParsing="false"
+                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: red;" text="Esci"/>
+
 
                   <!-- Testo per il feedback -->
-                  <Text fx:id="feedbackText" fill="green" layoutX="50.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+                  <Text fx:id="feedbackText" fill="green" layoutX="50.0" layoutY="450.0" strokeType="OUTSIDE"
+                        strokeWidth="0.0" text=""/>
                </children>
             </AnchorPane>
          </children>
