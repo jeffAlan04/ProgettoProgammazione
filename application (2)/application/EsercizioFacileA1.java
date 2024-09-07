@@ -23,6 +23,15 @@ public class EsercizioFacileA1 {
     private Button nextButton;
 
     @FXML
+    private Button option1Button;
+
+    @FXML
+    private Button option2Button;
+
+    @FXML
+    private Button option3Button;
+
+    @FXML
     public void initialize() {
 
         String commento = "// Il programma deve calcolare la somma dei numeri pari da 1 a 10.\n";
@@ -59,5 +68,28 @@ public class EsercizioFacileA1 {
                 correctCode, codeArea,
                 verifyButton, feedbackText, esciButton,
                 nextButton, prossimoLivello);
+
+        CostruzioneScenaAlan costruzioneScenaAlan = new CostruzioneScenaAlan();
+
+        costruzioneScenaAlan.startProgress();
+
+        setupAnswerButtons();
+    }
+
+    private void setupAnswerButtons() {
+        // Set button actions to check for the correct answer
+        option1Button.setOnAction(event -> checkAnswer(option1Button.getText()));
+        option2Button.setOnAction(event -> checkAnswer(option2Button.getText()));
+        option3Button.setOnAction(event -> checkAnswer(option3Button.getText()));
+    }
+
+    private void checkAnswer(String selectedAnswer) {
+        String correctAnswer = "Correct Answer";  // Replace with the actual correct answer
+
+        if (selectedAnswer.equals(correctAnswer)) {
+            feedbackText.setText("Correct! Well done.");
+        } else {
+            feedbackText.setText("Incorrect. Try again.");
+        }
     }
 }

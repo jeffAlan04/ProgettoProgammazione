@@ -75,18 +75,10 @@ public class ModelloEsercizio {
     }
 
     private void prossimo(ActionEvent event, String prossimoLivello) throws IOException {
-        Parent root;
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(prossimoLivello)));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        if (prossimoLivello.equals("Fine")) {
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EsercizioAlan.fxml")));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-        }
-        else {
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(prossimoLivello)));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
         stage.show();
     }
 }

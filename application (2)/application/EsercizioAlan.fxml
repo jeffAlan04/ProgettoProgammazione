@@ -8,6 +8,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.paint.Color?>
 
+<?import javafx.scene.control.ProgressBar?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="605.0" prefWidth="902.0"
             xmlns="http://javafx.com/javafx/22"
@@ -25,6 +26,15 @@
                     <children>
                         <Text styleClass="text-title" layoutX="125.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0"
                               text="Correggi l'errore"/>
+
+                        <!-- ProgressBar -->
+                        <ProgressBar fx:id="progressBar" layoutX="50.0" layoutY="55.0" prefWidth="650.0"
+                                     progress="0.0" /> <!-- Initial progress set to 0.0 -->
+
+                        <!-- Button to simulate progress -->
+                        <Button fx:id="startButton" layoutX="50.0" layoutY="400.0" mnemonicParsing="false"
+                                onAction="#startProgress" prefHeight="40.0" prefWidth="50.0"
+                                styleClass="button-large" text="Start"/>
 
                         <!-- Facile Section -->
                         <AnchorPane layoutX="50.0" layoutY="100.0" prefHeight="85.0" prefWidth="650.0"

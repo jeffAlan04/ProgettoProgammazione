@@ -6,52 +6,70 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.TextArea?>
 
-<?import javafx.scene.control.TextArea?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0"
-            prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+<?import javafx.scene.control.ProgressBar?>
+<AnchorPane styleClass="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="626.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="application.EsercizioFacileA3">
    <children>
-      <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="565.0" prefWidth="858.0" style="-fx-background-color: #8F00FF;">
+      <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="565.0" prefWidth="858.0"
+                  style="-fx-background-color: linear-gradient(to bottom right, #a8e063, #56ab2f);">
          <children>
-            <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="509.0" prefWidth="750.0" style="-fx-background-color: #F0F8FF;">
+            <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="509.0" prefWidth="750.0"
+                        style="-fx-background-color: #eafaf1;">
                <children>
-
+                  <!-- ProgressBar -->
+                  <ProgressBar fx:id="progressBar" layoutX="50.0" layoutY="55.0" prefWidth="650.0"
+                               progress="0.0" /> <!-- Initial progress set to 0.0 -->
                   <!-- Numero progressivo di esercizio -->
-                  <Text fill="#8f00ff" layoutX="50.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                        text="Esercizio 3" wrappingWidth="650.0"/>
+                  <Text fill="#2c6e49" layoutX="50.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        text="Esercizio 3" wrappingWidth="650.0">
+                     <font>
+                        <Font size="24.0"/>
+                     </font>
+                  </Text>
 
                   <!-- Consegna dell'esercizio -->
-                  <Text fill="#8f00ff" layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                        text="Correggi il codice" wrappingWidth="650.0"/>
+                  <Text fill="#2c6e49" layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        text="Correggi il codice" wrappingWidth="650.0">
+                     <font>
+                        <Font size="18.0"/>
+                     </font>
+                  </Text>
 
                   <!-- Area di testo per il codice da correggere -->
                   <TextArea fx:id="codeArea" layoutX="50.0" layoutY="80.0" prefHeight="300.0" prefWidth="650.0"
-                            style="-fx-font-family: 'Courier New';"/>
+                            style="-fx-font-family: 'Courier New'; -fx-background-color: #f0f8f0;"/>
 
                   <!-- Pulsante per verificare il codice -->
                   <Button fx:id="verifyButton" layoutX="451.0" layoutY="400.0" mnemonicParsing="false"
-                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #8F00FF;"
+                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #4caf50; -fx-text-fill: white;"
                           text="Verifica"/>
 
                   <!-- Pulsante Next -->
                   <Button fx:id="nextButton" layoutX="604.0" layoutY="400.0" mnemonicParsing="false"
-                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #8F00FF;" text="Next"/>
+                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #4caf50; -fx-text-fill: white;"
+                          text="Next"/>
 
                   <!-- Pulsante per uscire -->
                   <Button fx:id="esciButton" layoutX="50.0" layoutY="400.0" mnemonicParsing="false"
-                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: red;" text="Esci"/>
-
+                          prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #e53935; -fx-text-fill: white;"
+                          text="Esci"/>
 
                   <!-- Testo per il feedback -->
-                  <Text fx:id="feedbackText" fill="green" layoutX="50.0" layoutY="450.0" strokeType="OUTSIDE"
-                        strokeWidth="0.0" text=""/>
+                  <Text fx:id="feedbackText" fill="#388e3c" layoutX="50.0" layoutY="450.0" strokeType="OUTSIDE"
+                        strokeWidth="0.0" text="">
+                     <font>
+                        <Font size="16.0"/>
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Text fill="#8f00ff" layoutX="371.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esercizo Facile" wrappingWidth="178.521484375">
+      <Text fill="#2c6e49" layoutX="371.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="Esercizio Facile" wrappingWidth="178.521484375">
          <font>
-            <Font size="22.0" />
+            <Font size="22.0"/>
          </font>
       </Text>
    </children>

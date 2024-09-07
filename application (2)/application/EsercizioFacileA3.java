@@ -53,7 +53,7 @@ public class EsercizioFacileA3 {
                     "    }\n" +
                     "}";
 
-            String prossimoLivello = "Fine";
+            String prossimoLivello = "EsercizioMedioA1.fxml";
 
             ModelloEsercizio modelloEsercizio = new ModelloEsercizio();
             modelloEsercizio.initialize(commento, initialCode,
