@@ -37,8 +37,12 @@ public class Dashbord {
     
     @FXML
     public void ScenaEsercizioAlan(ActionEvent event) throws IOException {
+        UserLogin userLogin = new UserLogin();
+        Progressi progressi = new Progressi();
+        String nomeFile = progressi.verificaCheckPoint(userLogin.getUserName());
+
         // Carica il file FXML per la scena di creazione nuovo utente e cambia la scena
-        Parent root = FXMLLoader.load(getClass().getResource("EsercizioAlan.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(nomeFile));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

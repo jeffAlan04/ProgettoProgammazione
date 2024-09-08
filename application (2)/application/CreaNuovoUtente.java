@@ -49,6 +49,13 @@ public class CreaNuovoUtente {
             mostraMessaggio("Errore", "Errore durante la registrazione", "C'è stato un errore nel salvataggio dell'utente.");
             e.printStackTrace();
         }
+
+        try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("progressi.json", true)))) {
+            out.println(username + ":" + "0-0:0");
+        } catch (IOException e) {
+            mostraMessaggio("Errore", "Errore durante il salvataggio dei punteggi", "C'è stato un errore nel salvataggio dell'utente.");
+            e.printStackTrace();
+        }
     }
     
     @FXML

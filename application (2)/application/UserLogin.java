@@ -26,6 +26,7 @@ public class UserLogin {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    public String userName;
 
     @FXML
     public void effettuaLogin(ActionEvent event) {
@@ -45,10 +46,15 @@ public class UserLogin {
         if (loginRiuscito) {
             mostraMessaggio("Successo", "Login completato", "Benvenuto " + username + "!");
             ScenaDashbord(event,username);
+            this.userName = username;
             // Passa alla prossima scena o funzionalità dell'applicazione (da implementare)
         } else {
             mostraMessaggio("Errore", "Login fallito", "Username o password errati.");
         }
+    }
+
+    public String getUserName(){
+        return this.userName;
     }
 
     @FXML

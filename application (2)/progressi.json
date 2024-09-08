@@ -1,0 +1,20 @@
+[
+  {
+    "jeff": {
+      "checkPoint": {
+        "livello": 1,
+        "esercizio": 1
+      },
+      "punteggio": 0
+    }
+  },
+  {
+    "jason": {
+      "checkPoint": {
+        "livello": 1,
+        "esercizio": 1
+      },
+      "punteggio": 0
+    }
+  }
+]
