@@ -23,7 +23,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="402.0" layoutY="91.0" prefHeight="338.0" prefWidth="303.0" style="-fx-background-color: #8F00FF;">
                      <children>
-                        <Text layoutX="26.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correggi l'errore">
+                        <Text layoutX="50.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Java Debug Quest" style="-fx-text-alignment: center;">
                            <font>
                               <Font size="24.0" />
                            </font>

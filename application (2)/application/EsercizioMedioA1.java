@@ -51,8 +51,8 @@ public class EsercizioMedioA1 {
 
         String prossimoLivello = "EsercizioMedio2.fxml";
 
-        ModelloEsercizio modelloEsercizio = new ModelloEsercizio();
-        modelloEsercizio.initialize(commento,initialCode,
+        ModelloEsercizioDifficile modelloEsercizioDifficile = new ModelloEsercizioDifficile();
+        modelloEsercizioDifficile.initialize(commento,initialCode,
                 correctCode, codeArea,
                 verifyButton, feedbackText, esciButton,
                 nextButton, prossimoLivello);

@@ -1,22 +1,19 @@
 package application;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
 
-public class ModelloEsercizio {
+public class ModelloEsercizioDifficile {
     public void initialize(String commento, String initialCode,
                            String correctCode, TextArea codeArea,
                            Button verifyButton, Text feedbackText,
@@ -47,7 +44,6 @@ public class ModelloEsercizio {
             }
         });
     }
-
 
     // Metodo per verificare il codice inserito dall'utente
     private void checkCode(String correctCode, TextArea codeArea, Text feedbackText, Button nextButton) {

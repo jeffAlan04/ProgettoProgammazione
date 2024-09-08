@@ -1,7 +1,9 @@
 package application;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 
@@ -23,13 +25,14 @@ public class EsercizioFacileA1 {
     private Button nextButton;
 
     @FXML
-    private Button option1Button;
+    private RadioButton r1;
 
     @FXML
-    private Button option2Button;
+    private RadioButton r2;
 
     @FXML
-    private Button option3Button;
+    private RadioButton r3;
+
 
     @FXML
     public void initialize() {
@@ -49,47 +52,19 @@ public class EsercizioFacileA1 {
                 "    }\n" +
                 "}";
 
-        String correctCode = "public class SommaPari {\n" +
-                "    public static void main(String[] args) {\n" +
-                "        int somma = 0;\n" +
-                "        for (int i = 1; i <= 10; i++) {\n" +
-                "            if (i % 2 == 0) {\n" +
-                "                somma += i;\n" +
-                "            }\n" +
-                "        }\n" +
-                "        System.out.println(\"La somma è: \" + somma);\n" +
-                "    }\n" +
-                "}";
-
         String prossimoLivello = "EsercizioFacileA2.fxml";
-
-        ModelloEsercizio modelloEsercizio = new ModelloEsercizio() ;
-        modelloEsercizio.initialize(commento,initialCode,
-                correctCode, codeArea,
+        ModelloEsercizioFacile modelloEsercizioFacile = new ModelloEsercizioFacile();
+        modelloEsercizioFacile.initialize(commento, initialCode,
+                codeArea, r1, r2, r3, 3,
                 verifyButton, feedbackText, esciButton,
                 nextButton, prossimoLivello);
 
         CostruzioneScenaAlan costruzioneScenaAlan = new CostruzioneScenaAlan();
 
         costruzioneScenaAlan.startProgress();
-
-        setupAnswerButtons();
     }
 
-    private void setupAnswerButtons() {
-        // Set button actions to check for the correct answer
-        option1Button.setOnAction(event -> checkAnswer(option1Button.getText()));
-        option2Button.setOnAction(event -> checkAnswer(option2Button.getText()));
-        option3Button.setOnAction(event -> checkAnswer(option3Button.getText()));
-    }
-
-    private void checkAnswer(String selectedAnswer) {
-        String correctAnswer = "Correct Answer";  // Replace with the actual correct answer
-
-        if (selectedAnswer.equals(correctAnswer)) {
-            feedbackText.setText("Correct! Well done.");
-        } else {
-            feedbackText.setText("Incorrect. Try again.");
-        }
+    @FXML
+    private void controllaRisposta(ActionEvent event) {
     }
 }
