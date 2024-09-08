@@ -41,8 +41,11 @@
                   </Text>
 
                   <!-- Area di testo per il codice da correggere -->
-                  <TextArea fx:id="codeArea" layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="650.0"
-                            style="-fx-font-family: 'Courier New'; -fx-background-color: black;"/>
+                  <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="650.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text fx:id="codeArea" layoutX="20.0" layoutY="20.0" style="-fx-font-family: 'Courier New';"/>
+                     </children>
+                  </AnchorPane>
 
                   <!-- Radio buttons moved below the text area -->
                   <RadioButton fx:id="r1" layoutX="50.0" layoutY="300.0" mnemonicParsing="false"

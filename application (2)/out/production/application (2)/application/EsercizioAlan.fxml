@@ -31,11 +31,6 @@
                         <ProgressBar fx:id="progressBar" layoutX="50.0" layoutY="55.0" prefWidth="650.0"
                                      progress="0.0" /> <!-- Initial progress set to 0.0 -->
 
-                        <!-- Button to simulate progress -->
-                        <Button fx:id="startButton" layoutX="50.0" layoutY="400.0" mnemonicParsing="false"
-                                onAction="#startProgress" prefHeight="40.0" prefWidth="50.0"
-                                styleClass="button-large" text="Start"/>
-
                         <!-- Facile Section -->
                         <AnchorPane layoutX="50.0" layoutY="100.0" prefHeight="85.0" prefWidth="650.0"
                                     style="-fx-background-color: linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black; -fx-border-width: 1px;">

@@ -9,7 +9,7 @@ import javafx.scene.text.Text;
 
 public class EsercizioFacileA2 {
     @FXML
-    private TextArea codeArea;
+    private Text codeArea;
 
     @FXML
     private Button verifyButton;
@@ -35,10 +35,9 @@ public class EsercizioFacileA2 {
     @FXML
     public void initialize() {
 
-        String commento = "// Questo programma deve calcolare il fattoriale di un numero.\n";
-
         // Codice predefinito nell'area di testo
-        String initialCode = "public class Fattoriale {\n" +
+        String testoDomanda = "// Questo programma deve calcolare il fattoriale di un numero.\n" +
+                "public class Fattoriale {\n" +
                 "    public static void main(String[] args) {\n" +
                 "        int n = 5;\n" +
                 "        int fattoriale = 1;\n" +
@@ -52,7 +51,7 @@ public class EsercizioFacileA2 {
         String prossimoLivello = "EsercizioFacileA3.fxml";
 
         ModelloEsercizioFacile modelloEsercizioFacile = new ModelloEsercizioFacile();
-        modelloEsercizioFacile.initialize(commento, initialCode,
+        modelloEsercizioFacile.initialize(testoDomanda,
                 codeArea, r1, r2, r3, 1,
                 verifyButton, feedbackText, esciButton,
                 nextButton, prossimoLivello);

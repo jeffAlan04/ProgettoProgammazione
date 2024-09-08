@@ -17,16 +17,14 @@ import java.util.Objects;
 
 public class ModelloEsercizioFacile {
 
-    public void initialize(String commento, String initialCode,
-                           TextArea codeArea, RadioButton r1, RadioButton r2, RadioButton r3,
+    public void initialize(String testoDomanda,
+                           Text codeArea, RadioButton r1, RadioButton r2, RadioButton r3,
                            int rispostaGiusta,
                            Button verifyButton, Text feedbackText,
                            Button esciButton,
                            Button nextButton, String prossimoLivello) {
 
-        codeArea.appendText(commento);
-        codeArea.appendText(initialCode);
-
+        codeArea.setText(testoDomanda);
         nextButton.setDisable(true);
         nextButton.setStyle("-fx-background-color: grey; ");
 

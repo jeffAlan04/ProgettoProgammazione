@@ -10,7 +10,7 @@ import javafx.scene.text.Text;
 public class EsercizioFacileA1 {
 
     @FXML
-    private TextArea codeArea;
+    private Text codeArea;
 
     @FXML
     private Button verifyButton;
@@ -37,10 +37,9 @@ public class EsercizioFacileA1 {
     @FXML
     public void initialize() {
 
-        String commento = "// Il programma deve calcolare la somma dei numeri pari da 1 a 10.\n";
-
         // Codice predefinito nell'area di testo
-        String initialCode = "public class SommaPari {\n" +
+        String testoDomanda = "// Il programma deve calcolare la somma dei numeri pari da 1 a 10.\n" +
+                "public class SommaPari {\n" +
                 "    public static void main(String[] args) {\n" +
                 "        int somma = 0;\n" +
                 "        for (int i = 1; i <= 10; i++) {\n" +
@@ -54,7 +53,7 @@ public class EsercizioFacileA1 {
 
         String prossimoLivello = "EsercizioFacileA2.fxml";
         ModelloEsercizioFacile modelloEsercizioFacile = new ModelloEsercizioFacile();
-        modelloEsercizioFacile.initialize(commento, initialCode,
+        modelloEsercizioFacile.initialize(testoDomanda,
                 codeArea, r1, r2, r3, 3,
                 verifyButton, feedbackText, esciButton,
                 nextButton, prossimoLivello);
