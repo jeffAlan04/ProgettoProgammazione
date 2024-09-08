@@ -5,7 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 
-public class EsercizioMedioA1 {
+public class EsercizioMedioA3 {
+
     @FXML
     private Text codeArea;
 
@@ -28,25 +29,27 @@ public class EsercizioMedioA1 {
     public void initialize() {
 
         // Codice predefinito nell'area di testo
-        String domanda = "// Inversione di una stringa\n" +
-                "public class InvertiStringa {\n" +
-                "    public static void main(String[] args) {\n" +
-                "        String str = \"ciao\";\n" +
-                "        String invertita = \"\";\n" +
-                "        for (int i = 0; i < str.length(); i++) {\n" +
-                "            invertita += str.charAt(i);\n" +
-                "        }\n" +
-                "        System.out.println(\"Stringa invertita: \" + invertita);\n" +
-                "    }\n" +
-                "}\n";
+        String domanda =
+                "// Questo programma deve calcolare il fattoriale di un numero.\n" +
+                        "public class Fattoriale {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        int n = 5;\n" +
+                        "        int fattoriale = 1;\n" +
+                        "        for (int i = 1; i <= n; i++) {\n" +
+                        "            fattoriale -= i;\n" +
+                        "        }\n" +
+                        "        System.out.println(\"Il fattoriale di \" + n + \" è: \" + fattoriale);\n" +
+                        "    }\n" +
+                        "}";
 
         String rispostaGiusta = "test";
 
-        String prossimoLivello = "EsercizioMedioA2.fxml";
+        String prossimoLivello = "EsercizioDifficileA1.fxml";
 
         ModelloEsercizioMedio modelloEsercizioMedio = new ModelloEsercizioMedio();
         modelloEsercizioMedio.initialize(domanda, rispostaGiusta, codeArea,
                 verifyButton, feedbackText, esciButton,
                 nextButton, prossimoLivello, rispostaUserArea);
     }
+
 }

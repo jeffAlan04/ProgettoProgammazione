@@ -8,7 +8,7 @@ import javafx.scene.text.Text;
 public class EsercizioMedioA2 {
 
     @FXML
-    private TextArea codeArea;
+    private Text codeArea;
 
     @FXML
     private Button verifyButton;
@@ -23,39 +23,32 @@ public class EsercizioMedioA2 {
     private Button nextButton;
 
     @FXML
+    private TextArea rispostaUserArea;
+
+    @FXML
     public void initialize() {
 
-        String commento = "// Questo programma deve calcolare il fattoriale di un numero.\n";
-
         // Codice predefinito nell'area di testo
-        String initialCode = "public class Fattoriale {\n" +
-                "    public static void main(String[] args) {\n" +
-                "        int n = 5;\n" +
-                "        int fattoriale = 1;\n" +
-                "        for (int i = 1; i <= n; i++) {\n" +
-                "            fattoriale -= i;\n" +
-                "        }\n" +
-                "        System.out.println(\"Il fattoriale di \" + n + \" è: \" + fattoriale);\n" +
-                "    }\n" +
-                "}";
+        String domanda =
+                "// Questo programma deve calcolare il fattoriale di un numero.\n" +
+                        "public class Fattoriale {\n" +
+                        "    public static void main(String[] args) {\n" +
+                        "        int n = 5;\n" +
+                        "        int fattoriale = 1;\n" +
+                        "        for (int i = 1; i <= n; i++) {\n" +
+                        "            fattoriale -= i;\n" +
+                        "        }\n" +
+                        "        System.out.println(\"Il fattoriale di \" + n + \" è: \" + fattoriale);\n" +
+                        "    }\n" +
+                        "}";
 
-        String correctCode = "public class Fattoriale {\n" +
-                "    public static void main(String[] args) {\n" +
-                "        int n = 5;\n" +
-                "        int fattoriale = 1;\n" +
-                "        for (int i = 1; i <= n; i++) {\n" +
-                "            fattoriale *= i;\n" +
-                "        }\n" +
-                "        System.out.println(\"Il fattoriale di \" + n + \" è: \" + fattoriale);\n" +
-                "    }\n" +
-                "}";
+        String rispostaGiusta = "test";
 
         String prossimoLivello = "EsercizioMedioA3.fxml";
 
-        ModelloEsercizioDifficile modelloEsercizioDifficile = new ModelloEsercizioDifficile();
-        modelloEsercizioDifficile.initialize(commento, initialCode,
-                correctCode, codeArea,
+        ModelloEsercizioMedio modelloEsercizioMedio = new ModelloEsercizioMedio();
+        modelloEsercizioMedio.initialize(domanda, rispostaGiusta, codeArea,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello);
+                nextButton, prossimoLivello, rispostaUserArea);
     }
 }

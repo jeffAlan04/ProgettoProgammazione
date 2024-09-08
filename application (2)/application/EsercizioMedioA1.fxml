@@ -37,8 +37,16 @@
                   </Text>
 
                   <!-- Area di testo per il codice da correggere -->
-                  <TextArea fx:id="codeArea" layoutX="50.0" layoutY="80.0" prefHeight="300.0" prefWidth="650.0"
+                  <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="650.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text fx:id="codeArea" layoutX="20.0" layoutY="20.0" style="-fx-font-family: 'Courier New';"/>
+                     </children>
+                  </AnchorPane>
+
+                  <!-- Area di testo per il codice da correggere -->
+                  <TextArea fx:id="rispostaUserArea" layoutX="50.0" layoutY="300.0" prefHeight="20.0" prefWidth="150.0"
                             style="-fx-font-family: 'Courier New'; -fx-background-color: #f0f8f0;"/>
+
 
                   <!-- Pulsante per verificare il codice -->
                   <Button fx:id="verifyButton" layoutX="451.0" layoutY="400.0" mnemonicParsing="false"
