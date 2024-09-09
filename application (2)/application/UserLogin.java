@@ -17,6 +17,7 @@ public class UserLogin {
     private TextField usernameField; // Campo per inserire l'username
     @FXML
     private PasswordField passwordField; // Campo per inserire la password
+    private static final String FILE_PATH = "users.txt";
 
     @FXML
     public void effettuaLogin(ActionEvent event) {
@@ -70,7 +71,7 @@ public class UserLogin {
 
     private boolean verificaCredenziali(String username, String password) {
         // Verifica se le credenziali sono presenti nel file "users.txt"
-        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\User\\Downloads\\application (3)\\application\\user.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
             String linea;
             while ((linea = reader.readLine()) != null) {
                 String[] credenziali = linea.split(":");

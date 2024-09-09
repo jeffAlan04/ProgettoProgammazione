@@ -1,8 +1,10 @@
 package application;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.Node;
@@ -12,10 +14,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CreaNuovoUtente {
 
@@ -23,6 +25,10 @@ public class CreaNuovoUtente {
     private TextField usernameField; // Campo per inserire l'username
     @FXML
     private PasswordField passwordField; // Campo per inserire la password
+    private static final String FILE_PATH = "progressi.json"; // JSON file path
+
+    private static final String USERS_FILE_PATH = "users.txt"; // JSON file path
+
 
     // Riferimenti agli oggetti di scena
     private Stage stage;
@@ -42,18 +48,25 @@ public class CreaNuovoUtente {
         }
 
         // Salva i dati dell'utente nel file "users.txt"
-        try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("users.txt", true)))) {
+        try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(USERS_FILE_PATH, true)))) {
             out.println(username + ":" + password);
             mostraMessaggio("Successo", "Registrazione completata", "L'utente è stato registrato con successo.");
+
+            CheckPoint checkPoint = new CheckPoint();
+            checkPoint.setLivello(1);
+            checkPoint.setEsercizio(1);
+
+            Progresso progresso = new Progresso();
+
+            progresso.setCheckPoint(checkPoint);
+
+            User user = new User();
+            user.setUserName(username);
+            user.setProgresso(progresso);
+
+            signUpUser(user);
         } catch (IOException e) {
             mostraMessaggio("Errore", "Errore durante la registrazione", "C'è stato un errore nel salvataggio dell'utente.");
-            e.printStackTrace();
-        }
-
-        try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("progressi.json", true)))) {
-            out.println(username + ":" + "0-0:0");
-        } catch (IOException e) {
-            mostraMessaggio("Errore", "Errore durante il salvataggio dei punteggi", "C'è stato un errore nel salvataggio dell'utente.");
             e.printStackTrace();
         }
     }
@@ -72,7 +85,7 @@ public class CreaNuovoUtente {
         stage.setScene(scene);
         stage.show();
     }*/
-    
+
     // Metodo per chiudere l'applicazione con conferma
     @FXML
     public void ScenaChiusura(ActionEvent event) {
@@ -87,5 +100,37 @@ public class CreaNuovoUtente {
         alert.setHeaderText(header);
         alert.setContentText(contenuto);
         alert.showAndWait();
+    }
+
+
+    // Function to sign up a new user and save data to the JSON file
+    public static void signUpUser(User newUser) throws IOException {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        List<User> userList = new ArrayList<>();
+
+        // Read existing users from the JSON file
+        File file = new File(FILE_PATH);
+        if (file.exists()) {
+            try (Reader reader = new FileReader(file)) {
+                Type userListType = new TypeToken<ArrayList<User>>() {
+                }.getType();
+                userList = gson.fromJson(reader, userListType);// Load existing users
+
+                if (userList == null)
+                    userList = new ArrayList<>();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        // Append the new user to the list
+        userList.add(newUser);
+
+        // Write the updated list back to the file
+        try (Writer writer = new FileWriter(FILE_PATH)) {
+            gson.toJson(userList, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
