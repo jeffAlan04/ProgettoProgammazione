@@ -1,9 +1,8 @@
 [
   {
-    "userName": "a",
-    "punteggio": 20,
-    "livello": 2,
-    "esercizio": 2
+    "punteggio": 0,
+    "livello": 0,
+    "esercizio": 0
   },
   {
     "userName": "1",
@@ -25,6 +24,12 @@
   },
   {
     "userName": "al",
+    "punteggio": 0,
+    "livello": 3,
+    "esercizio": 1
+  },
+  {
+    "userName": "11",
     "punteggio": 0,
     "livello": 3,
     "esercizio": 1

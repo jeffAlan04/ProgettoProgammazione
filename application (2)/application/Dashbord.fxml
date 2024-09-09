@@ -74,7 +74,7 @@
       </AnchorPane>
 
       <!-- Dashbord Title -->
-      <Text fill="#8f00ff" layoutX="393.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P.L.A.Y" wrappingWidth="116.9215087890625">
+      <Text fill="green" layoutX="393.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P.L.A.Y" wrappingWidth="116.9215087890625">
          <font>
             <Font size="22.0" />
          </font>

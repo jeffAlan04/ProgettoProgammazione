@@ -40,7 +40,8 @@
         </AnchorPane>
 
         <!-- Close Button -->
-        <Button layoutX="713.0" mnemonicParsing="false" onAction="#ScenaChiusura" style="-fx-background-color: #A5D6A7; -fx-border-color: black; -fx-border-width: 1px;" text="X">
+        <Button layoutX="713.0" mnemonicParsing="false" onAction="#ScenaChiusura"
+                style="-fx-background-color: #A5D6A7; -fx-border-color: black; -fx-border-width: 1px;" text="X">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>

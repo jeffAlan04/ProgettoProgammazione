@@ -3,6 +3,7 @@ package application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Inizio {
