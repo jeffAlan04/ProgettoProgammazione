@@ -57,18 +57,13 @@ public class CreaNuovoUtente {
             e.printStackTrace();
         }
     }
-    
+
     @FXML
     public void ScenaLogin(ActionEvent event) throws IOException {
-        // Carica il file FXML per la scena di login e cambia la scena
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        SceneManager.cambiaScena("Login.fxml", event);
     }
-    
-    @FXML
+
+   /* @FXML
     public void ScenaCreaNuovoUtente1(ActionEvent event) throws IOException {
         // Carica il file FXML per la scena di creazione nuovo utente e cambia la scena
         Parent root = FXMLLoader.load(getClass().getResource("CreaNuovoUtente.fxml"));
@@ -76,6 +71,13 @@ public class CreaNuovoUtente {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }*/
+    
+    // Metodo per chiudere l'applicazione con conferma
+    @FXML
+    public void ScenaChiusura(ActionEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Chiusura.confermaChiusura(stage);
     }
 
     private void mostraMessaggio(String titolo, String header, String contenuto) {

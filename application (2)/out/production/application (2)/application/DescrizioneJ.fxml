@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DescrizioneJ">
+   <children>
+      <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="565.0" prefWidth="858.0" style="-fx-background-color: #8F00FF;">
+         <children>
+            <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="509.0" prefWidth="750.0" style="-fx-background-color: #F0F8FF;">
+               <children>
+                  <Button layoutX="451.0" layoutY="472.0" mnemonicParsing="false" onAction="#ScenaEsercizioJames" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #8F00FF;" text="Avanti" />
+                  <Button layoutX="604.0" layoutY="472.0" mnemonicParsing="false" onAction="#ScenaDashbord" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #8F00FF;" text="Annula" />
+                  <Text layoutX="51.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COME SVOLGERE I VARI ESERCIZI, RIODINA TRASCINANDO LE VARIA CASSELE" wrappingWidth="646.3880615234375">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="ListaD1" layoutX="51.0" layoutY="306.0" prefHeight="165.0" prefWidth="330.0" />
+               </children>
+            </AnchorPane>
+            <Text layoutX="113.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Riordina nella sequenza coretta">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ListView fx:id="ListaD" layoutX="94.0" layoutY="97.0" prefHeight="165.0" prefWidth="330.0" />
+         </children>
+      </AnchorPane>
+      <Text fill="#8f00ff" layoutX="345.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrizione Facile J" wrappingWidth="261.72149658203125">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button layoutX="867.0" mnemonicParsing="false" onAction="#ScenaChiusura" style="-fx-background-color: #8F00FF;" text="X">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
