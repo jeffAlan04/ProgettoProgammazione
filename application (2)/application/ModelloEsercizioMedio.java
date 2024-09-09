@@ -53,7 +53,7 @@ public class ModelloEsercizioMedio {
             feedbackText.setText("Bravo! Hai corretto correttamente il codice.");
             feedbackText.setFill(javafx.scene.paint.Color.GREEN);
             nextButton.setDisable(false);
-            nextButton.setStyle("-fx-background-color: green; ");
+            nextButton.setStyle("-fx-background-color: green; -fx-text-fill: white ");
         } else {
             feedbackText.setText("Errore! La condizione non è ancora corretta.");
             feedbackText.setFill(javafx.scene.paint.Color.RED);

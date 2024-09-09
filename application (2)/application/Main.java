@@ -11,7 +11,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // Carica il file FXML per la scena di login
-            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Inizio.fxml"));
             
             // Imposta il palco senza bordi e senza decorazioni
             primaryStage.initStyle(StageStyle.UNDECORATED);
