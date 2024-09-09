@@ -45,10 +45,11 @@ public class EsercizioMedioA2 {
         String rispostaGiusta = "test";
 
         String prossimoLivello = "EsercizioMedioA3.fxml";
-
+        int livelloAttuale = 2;
+        int esercizioAttuale = 2;
         ModelloEsercizioMedio modelloEsercizioMedio = new ModelloEsercizioMedio();
         modelloEsercizioMedio.initialize(domanda, rispostaGiusta, codeArea,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, rispostaUserArea);
+                nextButton, prossimoLivello, rispostaUserArea, livelloAttuale, esercizioAttuale);
     }
 }

@@ -52,11 +52,14 @@ public class EsercizioFacileA1 {
                 "}";
 
         String prossimoLivello = "EsercizioFacileA2.fxml";
+        int livelloAttuale = 1;
+        int esercizioAttuale = 1;
+
         ModelloEsercizioFacile modelloEsercizioFacile = new ModelloEsercizioFacile();
         modelloEsercizioFacile.initialize(testoDomanda,
                 codeArea, r1, r2, r3, 3,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello);
+                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale);
 
         CostruzioneScenaAlan costruzioneScenaAlan = new CostruzioneScenaAlan();
 

@@ -18,7 +18,8 @@ public class ModelloEsercizioMedio {
                            Text codeArea,
                            Button verifyButton, Text feedbackText,
                            Button esciButton,
-                           Button nextButton, String prossimoLivello, TextArea rispostaUserArea) {
+                           Button nextButton, String prossimoLivello, TextArea rispostaUserArea,
+                           int livelloAttuale, int esercizioAttuale) {
 
         codeArea.setText(domanda);
 
@@ -26,7 +27,8 @@ public class ModelloEsercizioMedio {
         nextButton.setStyle("-fx-background-color: grey; ");
 
         // Ascolta il pulsante di verifica
-        verifyButton.setOnAction(event -> checkRisposta(rispostaGiusta, rispostaUserArea, feedbackText, nextButton));
+        verifyButton.setOnAction(event -> checkRisposta(rispostaGiusta, rispostaUserArea,
+                feedbackText, nextButton, livelloAttuale, esercizioAttuale));
         esciButton.setOnAction(event -> {
             try {
                 esci(event);
@@ -45,7 +47,9 @@ public class ModelloEsercizioMedio {
     }
 
     // Metodo per verificare il codice inserito dall'utente
-    private void checkRisposta(String rispostaGiusta, TextArea rispostaUserArea, Text feedbackText, Button nextButton) {
+    private void checkRisposta(String rispostaGiusta, TextArea rispostaUserArea,
+                               Text feedbackText, Button nextButton,
+                               int livelloAttuale, int esercizioAttuale) {
         String rispostaUser = rispostaUserArea.getText().trim();
 
         // Verifica se l'utente ha corretto la condizione nel modo giusto
@@ -54,6 +58,8 @@ public class ModelloEsercizioMedio {
             feedbackText.setFill(javafx.scene.paint.Color.GREEN);
             nextButton.setDisable(false);
             nextButton.setStyle("-fx-background-color: green; -fx-text-fill: white ");
+            CostruzioneScenaAlan.aggiornaProgresso(livelloAttuale, esercizioAttuale);
+
         } else {
             feedbackText.setText("Errore! La condizione non è ancora corretta.");
             feedbackText.setFill(javafx.scene.paint.Color.RED);

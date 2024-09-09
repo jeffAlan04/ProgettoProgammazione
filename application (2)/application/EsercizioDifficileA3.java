@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 
-public class EsercizioDifficileA1 {
+public class EsercizioDifficileA3 {
     @FXML
     private TextArea codeArea;
 
@@ -67,7 +67,7 @@ public class EsercizioDifficileA1 {
 
         String prossimoLivello = "EsercizioDifficile2.fxml";
         int livelloAttuale = 3;
-        int esercizioAttuale = 1;
+        int esercizioAttuale = 3;
         ModelloEsercizioDifficile modelloEsercizioDifficile = new ModelloEsercizioDifficile();
         modelloEsercizioDifficile.initialize(commento,initialCode,
                 correctCode, codeArea,

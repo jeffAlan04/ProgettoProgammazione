@@ -76,12 +76,14 @@ public class EsercizioDifficileA2 {
                 "}";
 
         String prossimoLivello = "EsercizioDifficile2.fxml";
+        int livelloAttuale = 3;
+        int esercizioAttuale = 2;
 
         ModelloEsercizioDifficile modelloEsercizioDifficile = new ModelloEsercizioDifficile();
         modelloEsercizioDifficile.initialize(commento,initialCode,
                 correctCode, codeArea,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello);
+                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale);
         // Ascolta il pulsante di verifica
     }
 }

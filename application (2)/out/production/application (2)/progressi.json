@@ -1,12 +1,32 @@
 [
   {
-    "userName": "s",
-    "progresso": {
-      "punteggio": 0,
-      "checkPoint": {
-        "livello": 1,
-        "esercizio": 1
-      }
-    }
+    "userName": "a",
+    "punteggio": 20,
+    "livello": 2,
+    "esercizio": 2
+  },
+  {
+    "userName": "1",
+    "punteggio": 20,
+    "livello": 2,
+    "esercizio": 2
+  },
+  {
+    "userName": "1",
+    "punteggio": 0,
+    "livello": 1,
+    "esercizio": 1
+  },
+  {
+    "userName": "alan",
+    "punteggio": 0,
+    "livello": 2,
+    "esercizio": 1
+  },
+  {
+    "userName": "al",
+    "punteggio": 0,
+    "livello": 3,
+    "esercizio": 1
   }
 ]

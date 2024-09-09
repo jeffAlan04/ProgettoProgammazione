@@ -9,7 +9,7 @@
 <?import javafx.scene.control.ProgressBar?>
 <AnchorPane styleClass="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="626.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="application.EsercizioFacileA2">
+            fx:controller="application.EsercizioDifficileA3">
    <children>
       <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="565.0" prefWidth="858.0"
                   style="-fx-background-color: linear-gradient(to bottom right, #a8e063, #56ab2f);">

@@ -52,17 +52,12 @@ public class CreaNuovoUtente {
             out.println(username + ":" + password);
             mostraMessaggio("Successo", "Registrazione completata", "L'utente è stato registrato con successo.");
 
-            CheckPoint checkPoint = new CheckPoint();
-            checkPoint.setLivello(1);
-            checkPoint.setEsercizio(1);
-
-            Progresso progresso = new Progresso();
-
-            progresso.setCheckPoint(checkPoint);
 
             User user = new User();
             user.setUserName(username);
-            user.setProgresso(progresso);
+            user.setPunteggio(0);
+            user.setEsercizio(1);
+            user.setLivello(1);
 
             signUpUser(user);
         } catch (IOException e) {

@@ -18,7 +18,8 @@ public class ModelloEsercizioDifficile {
                            String correctCode, TextArea codeArea,
                            Button verifyButton, Text feedbackText,
                            Button esciButton,
-                           Button nextButton, String prossimoLivello) {
+                           Button nextButton, String prossimoLivello,
+                           int livelloAttuale, int esercizioAttuale) {
 
         codeArea.appendText(commento);
         codeArea.appendText(initialCode);
@@ -27,7 +28,8 @@ public class ModelloEsercizioDifficile {
         nextButton.setStyle("-fx-background-color: grey; ");
 
         // Ascolta il pulsante di verifica
-        verifyButton.setOnAction(event -> checkCode(correctCode, codeArea, feedbackText, nextButton));
+        verifyButton.setOnAction(event -> checkCode(correctCode, codeArea,
+                feedbackText, nextButton, livelloAttuale, esercizioAttuale));
         esciButton.setOnAction(event -> {
             try {
                 esci(event);
@@ -46,7 +48,8 @@ public class ModelloEsercizioDifficile {
     }
 
     // Metodo per verificare il codice inserito dall'utente
-    private void checkCode(String correctCode, TextArea codeArea, Text feedbackText, Button nextButton) {
+    private void checkCode(String correctCode, TextArea codeArea, Text feedbackText,
+                           Button nextButton, int livelloAttuale, int esercizioAttuale) {
         String userCode = codeArea.getText().trim();
 
         // Verifica se l'utente ha corretto la condizione nel modo giusto
@@ -55,6 +58,8 @@ public class ModelloEsercizioDifficile {
             feedbackText.setFill(javafx.scene.paint.Color.GREEN);
             nextButton.setDisable(false);
             nextButton.setStyle("-fx-background-color: green; -fx-text-fill: white");
+            CostruzioneScenaAlan.aggiornaProgresso(livelloAttuale, esercizioAttuale);
+
         } else {
             feedbackText.setText("Errore! La condizione non è ancora corretta.");
             feedbackText.setFill(javafx.scene.paint.Color.RED);

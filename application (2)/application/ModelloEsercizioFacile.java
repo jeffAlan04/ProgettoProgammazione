@@ -1,5 +1,8 @@
 package application;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,24 +15,30 @@ import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class ModelloEsercizioFacile {
+
 
     public void initialize(String testoDomanda,
                            Text codeArea, RadioButton r1, RadioButton r2, RadioButton r3,
                            int rispostaGiusta,
                            Button verifyButton, Text feedbackText,
                            Button esciButton,
-                           Button nextButton, String prossimoLivello) {
+                           Button nextButton, String prossimoLivello,
+                           int livelloAttuale, int esercizioAttuale) {
 
         codeArea.setText(testoDomanda);
         nextButton.setDisable(true);
         nextButton.setStyle("-fx-background-color: grey; ");
 
         verifyButton.setOnAction(event -> {
-            controllaRisposta(event, rispostaGiusta, r1, r2, r3, feedbackText, nextButton);
+            controllaRisposta(event, rispostaGiusta, r1, r2, r3, feedbackText,
+                    nextButton, livelloAttuale, esercizioAttuale);
         });
 
         // Ascolta il pulsante di verifica
@@ -52,43 +61,43 @@ public class ModelloEsercizioFacile {
 
     private void controllaRisposta(ActionEvent event, int rispostaGiusta,
                                    RadioButton r1, RadioButton r2, RadioButton r3,
-                                   Text feedbackText, Button nextButton) {
-        if(rispostaGiusta == 1) {
-            if(r1.isSelected()) {
-                feedbackGiusto(feedbackText, nextButton);
+                                   Text feedbackText, Button nextButton, int livelloAttuale, int esercizioAttuale) {
+        if (rispostaGiusta == 1) {
+            if (r1.isSelected()) {
+                feedbackGiusto(feedbackText, nextButton, livelloAttuale, esercizioAttuale);
             } else {
                 feedbackSbagliato(feedbackText, nextButton);
             }
         }
-        if(rispostaGiusta == 2) {
-            if(r2.isSelected()) {
-                feedbackGiusto(feedbackText, nextButton);
+        if (rispostaGiusta == 2) {
+            if (r2.isSelected()) {
+                feedbackGiusto(feedbackText, nextButton, livelloAttuale, esercizioAttuale);
             } else {
                 feedbackSbagliato(feedbackText, nextButton);
             }
         }
-        if(rispostaGiusta == 3) {
-            if(r3.isSelected()) {
-                feedbackGiusto(feedbackText, nextButton);
+        if (rispostaGiusta == 3) {
+            if (r3.isSelected()) {
+                feedbackGiusto(feedbackText, nextButton, livelloAttuale, esercizioAttuale);
             } else {
                 feedbackSbagliato(feedbackText, nextButton);
             }
         }
     }
 
-    private void feedbackGiusto(Text feedbackText, Button nextButton ) {
+    private void feedbackGiusto(Text feedbackText, Button nextButton, int livelloAttuale, int esercizioAttuale) {
         feedbackText.setText("Bravo! Hai corretto correttamente il codice.");
         feedbackText.setFill(javafx.scene.paint.Color.GREEN);
         nextButton.setDisable(false);
         nextButton.setStyle("-fx-background-color: green; -fx-text-fill: white");
+        CostruzioneScenaAlan.aggiornaProgresso(livelloAttuale, esercizioAttuale);
     }
 
-    private void feedbackSbagliato(Text feedbackText, Button nextButton ) {
+    private void feedbackSbagliato(Text feedbackText, Button nextButton) {
         feedbackText.setText("Errore! La condizione non è ancora corretta.");
         feedbackText.setFill(javafx.scene.paint.Color.RED);
         nextButton.setDisable(true);
     }
-
 
 
     private void esci(ActionEvent event) throws IOException {
@@ -106,4 +115,6 @@ public class ModelloEsercizioFacile {
         stage.setScene(scene);
         stage.show();
     }
+
+
 }

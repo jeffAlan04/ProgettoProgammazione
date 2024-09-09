@@ -5,3 +5,9 @@ a:a
 s:s
 s:s
 q:q
+a:a
+1:1
+1:1
+alan:alan
+al:12
+11:11

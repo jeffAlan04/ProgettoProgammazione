@@ -3,8 +3,9 @@ package application;
 public class User {
 
     private String userName;
-    private Progresso progresso;
-
+    private int punteggio;
+    private int livello;
+    private int esercizio;
     public String getUserName() {
         return userName;
     }
@@ -13,12 +14,31 @@ public class User {
         this.userName = userName;
     }
 
-    public Progresso getProgresso() {
-        return progresso;
+    public int getPunteggio() {
+        return punteggio;
     }
 
-    public void setProgresso(Progresso progresso) {
-        this.progresso = progresso;
+    public void setPunteggio(int punteggio) {
+        this.punteggio = punteggio;
     }
+
+    public int getLivello() {
+        return livello;
+    }
+
+    public void setLivello(int livello) {
+        this.livello = livello;
+    }
+
+    public int getEsercizio() {
+        return esercizio;
+    }
+
+    public void setEsercizio(int esercizio) {
+        this.esercizio = esercizio;
+    }
+
+
+
 }
 
