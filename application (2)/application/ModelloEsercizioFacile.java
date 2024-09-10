@@ -1,24 +1,16 @@
 package application;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.*;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class ModelloEsercizioFacile {
@@ -89,7 +81,7 @@ public class ModelloEsercizioFacile {
         feedbackText.setText("Bravo! Hai corretto correttamente il codice.");
         feedbackText.setFill(javafx.scene.paint.Color.GREEN);
         nextButton.setDisable(false);
-        nextButton.setStyle("-fx-background-color: green; -fx-text-fill: white");
+        nextButton.setStyle("-fx-background-color: #00BFFF; -fx-text-fill: white");
         CostruzioneScenaAlan.aggiornaProgresso(livelloAttuale, esercizioAttuale);
     }
 

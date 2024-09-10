@@ -27,7 +27,7 @@ public class Dashbord {
     // Metodo per passare alla scena di descrizione Alan
     @FXML
     public void ScenaDescrizioneAlan(ActionEvent event) throws IOException {
-        SceneManager.cambiaScena("EsercizioFacileA.fxml", event);
+        SceneManager.cambiaScena("EsercizioAlan.fxml", event);
     }
 
 

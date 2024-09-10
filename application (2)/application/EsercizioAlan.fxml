@@ -27,28 +27,24 @@
                         <Text styleClass="text-title" layoutX="235.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0"
                               text="Java Debug Quest"/>
 
-                        <!-- ProgressBar -->
-                        <ProgressBar fx:id="progressBar" layoutX="50.0" layoutY="55.0" prefWidth="650.0"
-                                     progress="0.0" /> <!-- Initial progress set to 0.0 -->
-
                         <!-- Facile Section -->
                         <AnchorPane layoutX="50.0" layoutY="100.0" prefHeight="85.0" prefWidth="650.0"
                                     style="-fx-background-color: linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black; -fx-border-width: 1px;">
                             <children>
                                 <Text styleClass="text-section" layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
                                       text="Facile"/>
-                                <Button styleClass="button-large" layoutX="500.0" layoutY="20.0" mnemonicParsing="false"
+                                <Button  fx:id="iniziaBtnFacile" styleClass="button-large" layoutX="500.0" layoutY="20.0" mnemonicParsing="false"
                                         onAction="#ScenaEsercizioFacile" text="Inizia"/>
                             </children>
                         </AnchorPane>
 
                         <!-- Intermedio Section -->
-                        <AnchorPane layoutX="50.0" layoutY="200.0" prefHeight="85.0" prefWidth="650.0"
+                        <AnchorPane  layoutX="50.0" layoutY="200.0" prefHeight="85.0" prefWidth="650.0"
                                     style="-fx-background-color: linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black; -fx-border-width: 1px;">
                             <children>
                                 <Text styleClass="text-section" layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
                                       text="Intermedio"/>
-                                <Button styleClass="button-large" layoutX="500.0" layoutY="20.0" mnemonicParsing="false"
+                                <Button fx:id="iniziaBtnMedio" styleClass="button-large" layoutX="500.0" layoutY="20.0" mnemonicParsing="false"
                                         onAction="#ScenaEsercizioIntermedio" text="Inizia"/>
                             </children>
                         </AnchorPane>
@@ -59,7 +55,7 @@
                             <children>
                                 <Text styleClass="text-section" layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
                                       text="Difficile"/>
-                                <Button styleClass="button-large" layoutX="500.0" layoutY="20.0" mnemonicParsing="false"
+                                <Button fx:id="iniziaBtnDifficile" styleClass="button-large" layoutX="500.0" layoutY="20.0" mnemonicParsing="false"
                                         onAction="#ScenaEsercizioDificile" text="Inizia"/>
                             </children>
                         </AnchorPane>

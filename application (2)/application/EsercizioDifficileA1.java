@@ -66,8 +66,8 @@ public class EsercizioDifficileA1 {
                 "}\n";
 
         String prossimoLivello = "EsercizioDifficile2.fxml";
-        int livelloAttuale = 3;
-        int esercizioAttuale = 1;
+        int livelloAttuale = 2;
+        int esercizioAttuale = 0;
         ModelloEsercizioDifficile modelloEsercizioDifficile = new ModelloEsercizioDifficile();
         modelloEsercizioDifficile.initialize(commento,initialCode,
                 correctCode, codeArea,

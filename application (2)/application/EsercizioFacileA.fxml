@@ -14,19 +14,18 @@
     <children>
         <!-- Outer AnchorPane with green gradient background -->
         <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="565.0" prefWidth="858.0"
-                    style="-fx-background-color: linear-gradient(to bottom, #E8F5E9, #C8E6C9); -fx-border-color: black; -fx-border-width: 2px;">
+                    style="-fx-background-color: linear-gradient(to bottom right, #a8e063, #56ab2f);">
             <children>
-                <!-- Inner AnchorPane with lighter green gradient background -->
+                <!-- Inner AnchorPane with white background -->
                 <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="509.0" prefWidth="750.0"
-                            style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 2px;">
+                            style="-fx-background-color: #eafaf1;">
                     <children>
-
                         <!-- ProgressBar with green theme -->
                         <ProgressBar fx:id="progressBar" layoutX="50.0" layoutY="55.0" prefWidth="650.0"
                                      progress="0.0" style="-fx-accent: #81C784;"/> <!-- Progress bar styled in green -->
 
                         <!-- Numero progressivo di esercizio -->
-                        <Text fill="#388E3C" layoutX="50.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        <Text fill="#2c6e49" layoutX="50.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0"
                               text="Esercizio 1" wrappingWidth="650.0">
                             <font>
                                 <Font size="24.0"/>
@@ -34,7 +33,7 @@
                         </Text>
 
                         <!-- Consegna dell'esercizio -->
-                        <Text fill="#388E3C" layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                        <Text fill="#2c6e49" layoutX="50.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
                               text="Java Debug Quest" wrappingWidth="650.0">
                             <font>
                                 <Font size="18.0"/>
@@ -43,7 +42,7 @@
 
                         <!-- Text area with white background for code display -->
                         <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="650.0"
-                                    style="-fx-background-color: white; -fx-border-color: #388E3C; -fx-border-width: 1px;">
+                                    style="-fx-background-color: white;">
                             <children>
                                 <Text fx:id="codeArea" layoutX="20.0" layoutY="20.0"
                                       style="-fx-font-family: 'Courier New';"/>
@@ -78,21 +77,21 @@
                         <!-- Buttons styled with green (and red for "Esci") -->
                         <Button fx:id="verifyButton" layoutX="451.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
-                                style="-fx-background-color: linear-gradient(to bottom, #A5D6A7, #81C784); -fx-text-fill: white;"
+                                style="-fx-background-color: #4caf50; -fx-text-fill: white;"
                                 text="Verifica"/>
 
                         <Button fx:id="nextButton" layoutX="604.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
-                                style="-fx-background-color: linear-gradient(to bottom, #A5D6A7, #81C784); -fx-text-fill: white;"
+                                style="-fx-background-color: lightblue; -fx-text-fill: white;"
                                 text="Next"/>
 
                         <Button fx:id="esciButton" layoutX="50.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
-                                style="-fx-background-color: linear-gradient(to bottom, #EF9A9A, #E57373); -fx-text-fill: white;"
+                                style="-fx-background-color: #e53935; -fx-text-fill: white;"
                                 text="Esci"/>
 
                         <!-- Feedback text styled in green -->
-                        <Text fx:id="feedbackText" fill="#388E3C" layoutX="50.0" layoutY="420.0" strokeType="OUTSIDE"
+                        <Text fx:id="feedbackText" fill="#388e3c" layoutX="50.0" layoutY="420.0" strokeType="OUTSIDE"
                               strokeWidth="0.0" text="">
                             <font>
                                 <Font size="16.0"/>
@@ -104,7 +103,7 @@
         </AnchorPane>
 
         <!-- Title text styled in green -->
-        <Text fill="#388E3C" layoutX="371.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0"
+        <Text fill="#2c6e49" layoutX="371.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0"
               text="Esercizio Facile" wrappingWidth="178.521484375">
             <font>
                 <Font size="22.0"/>

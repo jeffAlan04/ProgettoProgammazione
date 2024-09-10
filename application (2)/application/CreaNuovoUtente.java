@@ -56,8 +56,8 @@ public class CreaNuovoUtente {
             User user = new User();
             user.setUserName(username);
             user.setPunteggio(0);
-            user.setEsercizio(1);
-            user.setLivello(1);
+            user.setEsercizio(0);
+            user.setLivello(0);
 
             signUpUser(user);
         } catch (IOException e) {

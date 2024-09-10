@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 
 public class EsercizioFacileA1 {
@@ -36,7 +35,6 @@ public class EsercizioFacileA1 {
 
     @FXML
     public void initialize() {
-
         // Codice predefinito nell'area di testo
         String testoDomanda = "// Il programma deve calcolare la somma dei numeri pari da 1 a 10.\n" +
                 "public class SommaPari {\n" +
@@ -52,8 +50,8 @@ public class EsercizioFacileA1 {
                 "}";
 
         String prossimoLivello = "EsercizioFacileA2.fxml";
-        int livelloAttuale = 1;
-        int esercizioAttuale = 1;
+        int livelloAttuale = 0;
+        int esercizioAttuale = 0;
 
         ModelloEsercizioFacile modelloEsercizioFacile = new ModelloEsercizioFacile();
         modelloEsercizioFacile.initialize(testoDomanda,
@@ -62,8 +60,7 @@ public class EsercizioFacileA1 {
                 nextButton, prossimoLivello, livelloAttuale, esercizioAttuale);
 
         CostruzioneScenaAlan costruzioneScenaAlan = new CostruzioneScenaAlan();
-
-        costruzioneScenaAlan.startProgress();
+        // costruzioneScenaAlan.startProgress();
     }
 
     @FXML

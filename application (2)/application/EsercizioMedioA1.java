@@ -43,8 +43,8 @@ public class EsercizioMedioA1 {
         String rispostaGiusta = "test";
 
         String prossimoLivello = "EsercizioMedioA2.fxml";
-        int livelloAttuale = 2;
-        int esercizioAttuale = 1;
+        int livelloAttuale = 1;
+        int esercizioAttuale = 0;
 
         ModelloEsercizioMedio modelloEsercizioMedio = new ModelloEsercizioMedio();
         modelloEsercizioMedio.initialize(domanda, rispostaGiusta, codeArea,

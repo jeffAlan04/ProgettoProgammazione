@@ -11,3 +11,16 @@ a:a
 alan:alan
 al:12
 11:11
+a:a
+a:a
+q:q
+d:d
+w:w
+e:e
+r:r
+t:t
+z:z
+x:x
+c:c
+f:f
+vv:v

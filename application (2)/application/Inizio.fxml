@@ -11,13 +11,13 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0"
             prefWidth="740.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Inizio">
     <children>
-        <!-- Outer Background with Gradient and Border -->
+        <!-- Outer Background with Gradient, Border, and Rounded Corners -->
         <AnchorPane layoutX="25.0" layoutY="25.0" prefHeight="426.0" prefWidth="674.0"
-                    style="-fx-background-color: linear-gradient(to bottom, #E8F5E9, #C8E6C9); -fx-border-color: black; -fx-border-width: 2px;">
+                    style="-fx-background-color: linear-gradient(to bottom, #E8F5E9, #C8E6C9); -fx-border-color: black; -fx-border-width: 2px; -fx-background-radius: 15px; -fx-border-radius: 15px;">
             <children>
-                <!-- Inner Background with Gradient and Border -->
+                <!-- Inner Background with Gradient, Border, and Rounded Corners -->
                 <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="370.0" prefWidth="570.0"
-                            style="-fx-background-color: linear-gradient(to bottom, #FFFFFF, #E8F5E9); -fx-border-color: black; -fx-border-width: 2px;">
+                            style="-fx-background-color: linear-gradient(to bottom, #FFFFFF, #E8F5E9); -fx-border-color: black; -fx-border-width: 2px; -fx-background-radius: 15px; -fx-border-radius: 15px;">
                     <children>
                         <!-- Title Text -->
                         <Text layoutX="190.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P.L.A.Y">
@@ -26,9 +26,10 @@
                             </font>
                         </Text>
 
-                        <!-- Start Button -->
+                        <!-- Start Button with Rounded Corners -->
                         <Button layoutX="204.0" layoutY="220.0" mnemonicParsing="false" onAction="#ScenaLogin" prefHeight="52.0" prefWidth="161.0" text="INIZIO"
-                                style="-fx-background-color: linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black; -fx-border-width: 1px;">
+                                style="-fx-background-color: lightblue linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black; -fx-border-width: 1px;
+                                 -fx-background-radius: 5px; -fx-border-radius: 5px;">
                         </Button>
                     </children>
                 </AnchorPane>
@@ -39,9 +40,9 @@
             </children>
         </AnchorPane>
 
-        <!-- Close Button -->
-        <Button layoutX="713.0" mnemonicParsing="false" onAction="#ScenaChiusura"
-                style="-fx-background-color: #A5D6A7; -fx-border-color: black; -fx-border-width: 1px;" text="X">
+        <!-- Close Button with Rounded Corners -->
+        <Button layoutX="710.0" mnemonicParsing="false" onAction="#ScenaChiusura"
+                style="-fx-background-color: #A5D6A7; -fx-border-color: black; -fx-border-width: 1px; -fx-background-radius: 5px; -fx-border-radius: 5px;" text="X">
             <font>
                 <Font name="System Bold" size="13.0" />
             </font>

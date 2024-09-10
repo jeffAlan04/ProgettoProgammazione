@@ -50,8 +50,8 @@ public class EsercizioFacileA3 {
                 "}";
 
         String prossimoLivello = "EsercizioMedioA1.fxml";
-        int livelloAttuale = 1;
-        int esercizioAttuale = 3;
+        int livelloAttuale = 0;
+        int esercizioAttuale = 2;
 
         ModelloEsercizioFacile modelloEsercizioFacile = new ModelloEsercizioFacile();
         modelloEsercizioFacile.initialize(testoDomanda,
@@ -61,7 +61,7 @@ public class EsercizioFacileA3 {
 
         CostruzioneScenaAlan costruzioneScenaAlan = new CostruzioneScenaAlan();
 
-        costruzioneScenaAlan.startProgress();
+       // costruzioneScenaAlan.startProgress();
     }
 
     @FXML
