@@ -75,7 +75,7 @@ public class EsercizioDifficileA2 {
                 "\t}\n" +
                 "}";
 
-        String prossimoLivello = "EsercizioDifficile2.fxml";
+        String prossimoLivello = "EsercizioDifficileA3.fxml";
         int livelloAttuale = 2;
         int esercizioAttuale = 1;
 

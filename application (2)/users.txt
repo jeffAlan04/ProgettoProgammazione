@@ -25,3 +25,16 @@ c:c
 f:f
 vv:v
 j:j
+qqq:q
+t:t
+zzz:z
+x:x
+a:a
+cc:c
+dd:d
+g:g
+zz:z
+l:l
+c:c
+b:b
+m:m

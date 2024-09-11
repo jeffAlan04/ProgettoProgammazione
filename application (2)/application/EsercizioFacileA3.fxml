@@ -4,8 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.control.TextArea?>
-
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -14,15 +12,19 @@
             prefHeight="626.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="application.EsercizioFacileA3">
    <children>
+      <!-- Outer AnchorPane with rounded corners and border -->
       <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="565.0" prefWidth="858.0"
-                  style="-fx-background-color: linear-gradient(to bottom right, #a8e063, #56ab2f);">
+                  style="-fx-background-color: linear-gradient(to bottom right, #a8e063, #56ab2f);
+                         -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: black; -fx-border-width: 2px;">
          <children>
+            <!-- Inner AnchorPane with rounded corners and border -->
             <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="509.0" prefWidth="750.0"
-                        style="-fx-background-color: #eafaf1;">
+                        style="-fx-background-color: #eafaf1; -fx-background-radius: 15px;
+                               -fx-border-radius: 15px; -fx-border-color: black; -fx-border-width: 2px;">
                <children>
                   <!-- ProgressBar -->
                   <ProgressBar fx:id="progressBar" layoutX="50.0" layoutY="55.0" prefWidth="650.0"
-                               progress="0.0"/> <!-- Initial progress set to 0.0 -->
+                               progress="1.0" style="-fx-accent: #81C784;"/> <!-- Initial progress set to 1.0 -->
 
                   <!-- Numero progressivo di esercizio -->
                   <Text fill="#2c6e49" layoutX="50.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0"
@@ -40,14 +42,16 @@
                      </font>
                   </Text>
 
-                  <!-- Area di testo per il codice da correggere -->
-                  <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="650.0" style="-fx-background-color: white;">
+                  <!-- Area di testo per il codice da correggere with rounded corners -->
+                  <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="650.0"
+                              style="-fx-background-color: white; -fx-background-radius: 10px;
+                                     -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 1px;">
                      <children>
                         <Text fx:id="codeArea" layoutX="20.0" layoutY="20.0" style="-fx-font-family: 'Courier New';"/>
                      </children>
                   </AnchorPane>
 
-                  <!-- Radio buttons moved below the text area -->
+                  <!-- Radio buttons -->
                   <RadioButton fx:id="r1" layoutX="50.0" layoutY="300.0" mnemonicParsing="false"
                                text="int media = 0;" onAction="#controllaRisposta">
                      <font>
@@ -72,21 +76,21 @@
                      </font>
                   </RadioButton>
 
-                  <!-- Buttons below the option buttons -->
+                  <!-- Buttons below the option buttons with rounded corners -->
                   <Button fx:id="verifyButton" layoutX="451.0" layoutY="450.0" mnemonicParsing="false"
                           prefHeight="26.0" prefWidth="91.0"
-                          style="-fx-background-color: #4caf50; -fx-text-fill: white;"
-                          text="Verifica"/>
+                          style="-fx-background-color: #4caf50; -fx-text-fill: white;
+                                 -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Verifica"/>
 
                   <Button fx:id="nextButton" layoutX="604.0" layoutY="450.0" mnemonicParsing="false"
                           prefHeight="26.0" prefWidth="91.0"
-                          style="-fx-background-color: #4caf50; -fx-text-fill: white;"
-                          text="Next"/>
+                          style="-fx-background-color: #4caf50; -fx-text-fill: white;
+                                 -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Next"/>
 
                   <Button fx:id="esciButton" layoutX="50.0" layoutY="450.0" mnemonicParsing="false"
                           prefHeight="26.0" prefWidth="91.0"
-                          style="-fx-background-color: #e53935; -fx-text-fill: white;"
-                          text="Esci"/>
+                          style="-fx-background-color: #e53935; -fx-text-fill: white;
+                                 -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Esci"/>
 
                   <!-- Testo per il feedback -->
                   <Text fx:id="feedbackText" fill="#388e3c" layoutX="50.0" layoutY="420.0" strokeType="OUTSIDE"
@@ -99,6 +103,8 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+
+      <!-- Title text styled in green -->
       <Text fill="#2c6e49" layoutX="371.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0"
             text="Esercizio Facile" wrappingWidth="178.521484375">
          <font>

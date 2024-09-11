@@ -1,79 +1,56 @@
 [
   {
+    "userName": "a",
     "punteggio": 0,
-    "livello": 0,
+    "livello": 1,
     "esercizio": 0
   },
   {
-    "userName": "q",
-    "punteggio": 0,
-    "livello": 0,
-    "esercizio": 0
-  },
-  {
-    "userName": "d",
-    "punteggio": 0,
-    "livello": 0,
-    "esercizio": 3
-  },
-  {
-    "userName": "w",
-    "punteggio": 0,
-    "livello": 0,
-    "esercizio": 2
-  },
-  {
-    "userName": "e",
-    "punteggio": 0,
-    "livello": 0,
-    "esercizio": 2
-  },
-  {
-    "userName": "r",
-    "punteggio": 0,
-    "livello": 0,
-    "esercizio": 2
-  },
-  {
-    "userName": "t",
-    "punteggio": 0,
-    "livello": 0,
-    "esercizio": 1
-  },
-  {
-    "userName": "z",
-    "punteggio": 0,
-    "livello": 0,
-    "esercizio": 2
-  },
-  {
-    "userName": "x",
+    "userName": "cc",
     "punteggio": 0,
     "livello": 2,
-    "esercizio": 1
+    "esercizio": 2
+  },
+  {
+    "userName": "dd",
+    "punteggio": 0,
+    "livello": 2,
+    "esercizio": 2
+  },
+  {
+    "userName": "g",
+    "punteggio": 0,
+    "livello": 2,
+    "esercizio": 2
+  },
+  {
+    "userName": "zz",
+    "punteggio": 0,
+    "livello": 2,
+    "esercizio": 0
+  },
+  {
+    "userName": "l",
+    "punteggio": 0,
+    "livello": 1,
+    "esercizio": 0
   },
   {
     "userName": "c",
     "punteggio": 0,
-    "livello": 2,
-    "esercizio": 0
-  },
-  {
-    "userName": "f",
-    "punteggio": 0,
-    "livello": 2,
-    "esercizio": 0
-  },
-  {
-    "userName": "vv",
-    "punteggio": 0,
-    "livello": 2,
-    "esercizio": 1
-  },
-  {
-    "userName": "j",
-    "punteggio": 0,
     "livello": 0,
-    "esercizio": 1
+    "esercizio": 2
+  },
+  {
+    "userName": "b",
+    "punteggio": 0,
+    "livello": 1,
+    "esercizio": 0
+  },
+  {
+    "userName": "m",
+    "punteggio": 0,
+    "livello": 2,
+    "esercizio": 2
   }
 ]

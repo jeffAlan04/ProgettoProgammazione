@@ -53,7 +53,7 @@ public class CostruzioneScenaAlan {
             }
         }
         for (User user : userList) {
-            if (user.getUserName().equals(Sessione.getUsername())) {
+            if (user.getUserName() != null  && user.getUserName().equals(Sessione.getUsername())) {
                 scena = aggiornaScena(user, iniziaBtnFacile, iniziaBtnMedio, iniziaBtnDifficile);
             } else {
                 System.out.println("Hello world");
@@ -201,7 +201,7 @@ public class CostruzioneScenaAlan {
             prossimoLivello = "EsercizioFacileA3.fxml";
         }
         else if (livello == 1 && esercizio == 0) {
-            iniziaBtnMedio.setDisable(true);
+            iniziaBtnFacile.setDisable(true);
             iniziaBtnDifficile.setDisable(true);
             iniziaBtnMedio.setStyle("-fx-background-color: grey; ");
             iniziaBtnDifficile.setStyle("-fx-background-color: grey; ");

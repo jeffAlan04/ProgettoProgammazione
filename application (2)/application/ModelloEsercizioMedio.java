@@ -57,7 +57,7 @@ public class ModelloEsercizioMedio {
             feedbackText.setText("Bravo! Hai corretto correttamente il codice.");
             feedbackText.setFill(javafx.scene.paint.Color.GREEN);
             nextButton.setDisable(false);
-            nextButton.setStyle("-fx-background-color: green; -fx-text-fill: white ");
+            nextButton.setStyle("-fx-background-color: #00BFFF; -fx-text-fill: white ");
             CostruzioneScenaAlan.aggiornaProgresso(livelloAttuale, esercizioAttuale);
 
         } else {

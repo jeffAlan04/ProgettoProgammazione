@@ -12,17 +12,19 @@
             prefHeight="626.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="application.EsercizioFacileA1">
     <children>
-        <!-- Outer AnchorPane with green gradient background -->
+        <!-- Outer AnchorPane with green gradient background and rounded corners -->
         <AnchorPane layoutX="22.0" layoutY="39.0" prefHeight="565.0" prefWidth="858.0"
-                    style="-fx-background-color: linear-gradient(to bottom right, #a8e063, #56ab2f);">
+                    style="-fx-background-color: linear-gradient(to bottom right, #a8e063, #56ab2f);
+                           -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: black; -fx-border-width: 2px;">
             <children>
-                <!-- Inner AnchorPane with white background -->
+                <!-- Inner AnchorPane with white background and rounded corners -->
                 <AnchorPane layoutX="54.0" layoutY="28.0" prefHeight="509.0" prefWidth="750.0"
-                            style="-fx-background-color: #eafaf1;">
+                            style="-fx-background-color: #eafaf1; -fx-background-radius: 15px;
+                                   -fx-border-radius: 15px; -fx-border-color: black; -fx-border-width: 2px;">
                     <children>
                         <!-- ProgressBar with green theme -->
                         <ProgressBar fx:id="progressBar" layoutX="50.0" layoutY="55.0" prefWidth="650.0"
-                                     progress="0.0" style="-fx-accent: #81C784;"/> <!-- Progress bar styled in green -->
+                                     progress="0.33" style="-fx-accent: #81C784;"/> <!-- Progress bar styled in green -->
 
                         <!-- Numero progressivo di esercizio -->
                         <Text fill="#2c6e49" layoutX="50.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0"
@@ -42,7 +44,8 @@
 
                         <!-- Text area with white background for code display -->
                         <AnchorPane layoutX="50.0" layoutY="80.0" prefHeight="200.0" prefWidth="650.0"
-                                    style="-fx-background-color: white;">
+                                    style="-fx-background-color: white; -fx-background-radius: 10px;
+                                           -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 1px;">
                             <children>
                                 <Text fx:id="codeArea" layoutX="20.0" layoutY="20.0"
                                       style="-fx-font-family: 'Courier New';"/>
@@ -77,17 +80,17 @@
                         <!-- Buttons styled with green (and red for "Esci") -->
                         <Button fx:id="verifyButton" layoutX="451.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
-                                style="-fx-background-color: #4caf50; -fx-text-fill: white;"
+                                style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
                                 text="Verifica"/>
 
                         <Button fx:id="nextButton" layoutX="604.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
-                                style="-fx-background-color: lightblue; -fx-text-fill: white;"
+                                style="-fx-background-color: lightblue; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
                                 text="Next"/>
 
                         <Button fx:id="esciButton" layoutX="50.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
-                                style="-fx-background-color: #e53935; -fx-text-fill: white;"
+                                style="-fx-background-color: #e53935; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
                                 text="Esci"/>
 
                         <!-- Feedback text styled in green -->
