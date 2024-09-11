@@ -50,7 +50,13 @@
   {
     "userName": "m",
     "punteggio": 0,
-    "livello": 0,
+    "livello": 2,
     "esercizio": 2
+  },
+  {
+    "userName": "j",
+    "punteggio": 0,
+    "livello": 1,
+    "esercizio": 0
   }
 ]

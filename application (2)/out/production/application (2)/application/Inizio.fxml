@@ -28,7 +28,7 @@
 
                         <!-- Start Button with Rounded Corners -->
                         <Button layoutX="204.0" layoutY="220.0" mnemonicParsing="false" onAction="#ScenaLogin" prefHeight="52.0" prefWidth="161.0" text="INIZIO"
-                                style="-fx-background-color: lightblue linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black; -fx-border-width: 1px;
+                                style="-fx-background-color: #32CD32 linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black; -fx-border-width: 1px;
                                  -fx-background-radius: 5px; -fx-border-radius: 5px;">
                         </Button>
                     </children>
