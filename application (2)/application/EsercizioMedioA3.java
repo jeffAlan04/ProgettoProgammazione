@@ -26,32 +26,43 @@ public class EsercizioMedioA3 {
     private TextArea rispostaUserArea;
 
     @FXML
+    private Button helpButton;
+
+    @FXML
     public void initialize() {
 
         // Codice predefinito nell'area di testo
         String domanda =
-                "// Questo programma deve calcolare il fattoriale di un numero.\n" +
-                        "public class Fattoriale {\n" +
-                        "    public static void main(String[] args) {\n" +
-                        "        int n = 5;\n" +
-                        "        int fattoriale = 1;\n" +
-                        "        for (int i = 1; i <= n; i++) {\n" +
-                        "            fattoriale -= i;\n" +
+                "// La funzione calcola il prodotto di tutti i numeri dispari in una lista di numeri interi.\n" +
+                        "// Se non ci sono numeri dispari nella lista, deve restituire 1.\n" +
+                        "import java.util.List;\n" +
+                        "public class ProdottoNumeriDispari {\n" +
+                        "    public static int calcolaProdottoDispari(List<Integer> numeri) {\n" +
+                        "        -----------------------;\n" +
+                        "        boolean trovatoDispari = false;\n" +
+                        "        for (int i = 0; i < numeri.size(); i++) {\n" +
+                        "            if (numeri.get(i) % 2 != 0) {\n" +
+                        "                prodotto *= numeri.get(i);\n" +
+                        "                trovatoDispari = true;\n" +
+                        "            }\n" +
                         "        }\n" +
-                        "        System.out.println(\"Il fattoriale di \" + n + \" è: \" + fattoriale);\n" +
+                        "        if (!trovatoDispari) {\n" +
+                        "            prodotto = 1;\n" +
+                        "        }\n" +
+                        "        return prodotto;\n" +
                         "    }\n" +
                         "}";
 
-        String rispostaGiusta = "test";
+        String rispostaGiusta = "int prodotto = 0";
 
-        String prossimoLivello = "EsercizioDifficileA.fxml";
+        String prossimoLivello = "DescrizioneDifficileA.fxml";
         int livelloAttuale = 1;
         int esercizioAttuale = 2;
 
         ModelloEsercizioMedio modelloEsercizioMedio = new ModelloEsercizioMedio();
         modelloEsercizioMedio.initialize(domanda, rispostaGiusta, codeArea,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, rispostaUserArea, livelloAttuale, esercizioAttuale);
+                nextButton, prossimoLivello, rispostaUserArea, livelloAttuale, esercizioAttuale, helpButton);
     }
 
 }

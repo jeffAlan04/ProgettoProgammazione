@@ -26,6 +26,9 @@ public class EsercizioMedioA2 {
     private TextArea rispostaUserArea;
 
     @FXML
+    private Button helpButton;
+
+    @FXML
     public void initialize() {
 
         // Codice predefinito nell'area di testo
@@ -36,13 +39,13 @@ public class EsercizioMedioA2 {
                         "        int n = 5;\n" +
                         "        int fattoriale = 1;\n" +
                         "        for (int i = 1; i <= n; i++) {\n" +
-                        "            fattoriale -= i;\n" +
+                        "            fattoriale ------------;\n" +
                         "        }\n" +
                         "        System.out.println(\"Il fattoriale di \" + n + \" è: \" + fattoriale);\n" +
                         "    }\n" +
                         "}";
 
-        String rispostaGiusta = "test";
+        String rispostaGiusta = "*= i";
 
         String prossimoLivello = "EsercizioMedioA3.fxml";
         int livelloAttuale = 1;
@@ -50,6 +53,6 @@ public class EsercizioMedioA2 {
         ModelloEsercizioMedio modelloEsercizioMedio = new ModelloEsercizioMedio();
         modelloEsercizioMedio.initialize(domanda, rispostaGiusta, codeArea,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, rispostaUserArea, livelloAttuale, esercizioAttuale);
+                nextButton, prossimoLivello, rispostaUserArea, livelloAttuale, esercizioAttuale, helpButton);
     }
 }

@@ -1,22 +1,21 @@
 package application;
 
-import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.ProgressBar;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 
 import java.io.IOException;
 import java.util.Objects;
 
-public class DescrizioneFacileA {
+public class DescrizioneDifficileA {
 
     @FXML
     private Button nextButton;
@@ -27,26 +26,29 @@ public class DescrizioneFacileA {
     @FXML
     private Text gameRulesTextArea;
 
-    @FXML
-    public void initialize() {
-        nextButton.setOnAction(event -> {
-            try {
-                apriEsercizio(event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+   @FXML
+    public void initialize(){
+       nextButton.setOnAction(event -> {
+           try {
+               apriEsercizio(event);
+           } catch (IOException e) {
+               throw new RuntimeException(e);
+           }
+       });
 
-        esciButton.setOnAction(event -> {
-            try {
-                esci(event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+       esciButton.setOnAction(event -> {
+           try {
+               esci(event);
+           } catch (IOException e) {
+               throw new RuntimeException(e);
+           }
+       });
 
-        descrizioneRegole();
+       descrizioneRegole();
+
     }
+
+
 
 
     // Method to switch to the "Dashbord" scene
@@ -60,21 +62,19 @@ public class DescrizioneFacileA {
 
     // Method to switch to the specified next scene
     private void apriEsercizio(ActionEvent event) throws IOException {
-        Object root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EsercizioFacileA.fxml")));
+        Object root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EsercizioDifficileA.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene((Parent) root);
         stage.setScene(scene);
         stage.show();
     }
-
     private void descrizioneRegole() {
 
-        String regole = "In questo livello ti verrà mostrato un commento, un codice\n" +
-                "e tre opzioni.\n" +
-                "Scegli quella che ritieni più oppurtuna in modo da rendere il codice\n" +
-                "coerente con il commento.\n" +
-                "Se ti trovi in difficoltà potrai utlizzare il pulsante per i suggerimenti,\n" +
-                "ma ricorda che ti verranno assegnati solo la metà dei punti.";
+        String regole = "Se sei arrivato fin qui, vuol dire che hai la stoffa per diventare un vero programmatore!! ;)\n" +
+                "Ora dovrai superare il livello più difficile.\n" +
+                "Come nei livelli precedenti, ti verrà mostrato un commento ed un codice\n" +
+                "se c'è, trova gli errori e correggili direttamente sul codice\n"+
+                "Potrai usare il pulsante dei suggerimenti, ma stai attento a non usufruirne.\n";
 
         gameRulesTextArea.setText(regole);
 

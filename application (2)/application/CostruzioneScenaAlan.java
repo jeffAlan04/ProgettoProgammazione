@@ -105,7 +105,7 @@ public class CostruzioneScenaAlan {
         stage.show();
     }
 
-    public static void aggiornaProgresso(int livelloAttuale, int esercizioAttuale) {
+    public static void aggiornaProgresso(int livelloAttuale, int esercizioAttuale, boolean suggerimentoAttivato) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         List<User> userList = new ArrayList<>();
@@ -130,6 +130,11 @@ public class CostruzioneScenaAlan {
             if (userList.get(i).getUserName().equals(Sessione.getUsername())) {
                 index = i;
                 user = userList.get(i);
+
+                if (suggerimentoAttivato) user.setPunteggio(user.getPunteggio() + 10);
+
+                else user.setPunteggio(user.getPunteggio() + 20);
+
                if (esercizioAttuale == 0 && livelloAttuale == 0){
                    user.setEsercizio(1);
                    break;
@@ -184,7 +189,7 @@ public class CostruzioneScenaAlan {
             iniziaBtnDifficile.setDisable(true);
             iniziaBtnMedio.setStyle("-fx-background-color: grey; ");
             iniziaBtnDifficile.setStyle("-fx-background-color: grey; ");
-            prossimoLivello = "EsercizioFacileA.fxml";
+            prossimoLivello = "DescrizioneFacileA.fxml";
         }
         else if (livello == 0 && esercizio == 1) {
             iniziaBtnMedio.setDisable(true);
@@ -205,7 +210,7 @@ public class CostruzioneScenaAlan {
             iniziaBtnDifficile.setDisable(true);
             iniziaBtnMedio.setStyle("-fx-background-color: grey; ");
             iniziaBtnDifficile.setStyle("-fx-background-color: grey; ");
-            prossimoLivello = "EsercizioMedioA1.fxml";
+            prossimoLivello = "DescrizioneMedioA.fxml";
         }
         else if (livello == 1 && esercizio == 1) {
             iniziaBtnFacile.setDisable(true);
@@ -226,7 +231,7 @@ public class CostruzioneScenaAlan {
             iniziaBtnMedio.setDisable(true);
             iniziaBtnFacile.setStyle("-fx-background-color: grey; ");
             iniziaBtnMedio.setStyle("-fx-background-color: grey; ");
-            prossimoLivello = "EsercizioDifficileA.fxml";
+            prossimoLivello = "DescrizioneDifficileA.fxml";
         }
         else if (livello == 2 && esercizio == 1) {
             iniziaBtnFacile.setDisable(true);

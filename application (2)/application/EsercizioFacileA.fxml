@@ -78,7 +78,7 @@
                         </RadioButton>
 
                         <!-- Buttons styled with green (and red for "Esci") -->
-                        <Button fx:id="verifyButton" layoutX="451.0" layoutY="450.0" mnemonicParsing="false"
+                        <Button fx:id="verifyButton" layoutX="470.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
                                 style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
                                 text="Verifica"/>
@@ -92,6 +92,12 @@
                                 prefHeight="26.0" prefWidth="91.0"
                                 style="-fx-background-color: #e53935; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
                                 text="Esci"/>
+
+
+                        <Button fx:id="helpButton" layoutX="340.0" layoutY="450.0" mnemonicParsing="false"
+                                prefHeight="26.0" prefWidth="91.0"
+                                style="-fx-background-color: #FEBE10; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
+                                text="Suggerimento"/>
 
                         <!-- Feedback text styled in green -->
                         <Text fx:id="feedbackText" fill="#388e3c" layoutX="50.0" layoutY="420.0" strokeType="OUTSIDE"

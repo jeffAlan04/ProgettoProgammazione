@@ -47,7 +47,7 @@
                                    -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 1px;"/>
 
                   <!-- Pulsante per verificare il codice with rounded corners -->
-                  <Button fx:id="verifyButton" layoutX="451.0" layoutY="400.0" mnemonicParsing="false"
+                  <Button fx:id="verifyButton" layoutX="468.0" layoutY="400.0" mnemonicParsing="false"
                           prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #4caf50; -fx-text-fill: white;
                                  -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Verifica"/>
 
@@ -55,6 +55,11 @@
                   <Button fx:id="nextButton" layoutX="604.0" layoutY="400.0" mnemonicParsing="false"
                           prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: #4caf50; -fx-text-fill: white;
                                  -fx-background-radius: 5px; -fx-border-radius: 5px;" text="Next"/>
+
+                  <Button fx:id="helpButton" layoutX="340.0" layoutY="400.0" mnemonicParsing="false"
+                          prefHeight="26.0" prefWidth="91.0"
+                          style="-fx-background-color: #FEBE10; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
+                          text="Suggerimento"/>
 
                   <!-- Pulsante per uscire with rounded corners -->
                   <Button fx:id="esciButton" layoutX="50.0" layoutY="400.0" mnemonicParsing="false"

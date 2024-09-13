@@ -33,6 +33,9 @@ public class EsercizioFacileA2 {
     private RadioButton r3;
 
     @FXML
+    private Button helpButton;
+
+    @FXML
     public void initialize() {
 
         // Codice predefinito nell'area di testo
@@ -56,7 +59,7 @@ public class EsercizioFacileA2 {
         modelloEsercizioFacile.initialize(testoDomanda,
                 codeArea, r1, r2, r3, 1,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale);
+                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale, helpButton);
 
         CostruzioneScenaAlan costruzioneScenaAlan = new CostruzioneScenaAlan();
 

@@ -22,6 +22,9 @@ public class EsercizioDifficileA1 {
     private Button nextButton;
 
     @FXML
+    private Button helpButton;
+
+    @FXML
     public void initialize() {
 
         String commento = "// Inversione di una stringa\n";
@@ -72,7 +75,7 @@ public class EsercizioDifficileA1 {
         modelloEsercizioDifficile.initialize(commento,initialCode,
                 correctCode, codeArea,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale);
+                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale, helpButton);
         // Ascolta il pulsante di verifica
     }
 }

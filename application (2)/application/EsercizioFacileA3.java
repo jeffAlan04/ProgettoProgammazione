@@ -32,6 +32,9 @@ public class EsercizioFacileA3 {
     private RadioButton r3;
 
     @FXML
+    private Button helpButton;
+
+    @FXML
     public void initialize() {
 
         // Codice predefinito nell'area di testo
@@ -49,7 +52,7 @@ public class EsercizioFacileA3 {
                 "    }\n" +
                 "}";
 
-        String prossimoLivello = "EsercizioMedioA1.fxml";
+        String prossimoLivello = "DescrizioneMedioA.fxml";
         int livelloAttuale = 0;
         int esercizioAttuale = 2;
 
@@ -57,7 +60,7 @@ public class EsercizioFacileA3 {
         modelloEsercizioFacile.initialize(testoDomanda,
                 codeArea, r1, r2, r3, 2,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale);
+                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale, helpButton);
 
         CostruzioneScenaAlan costruzioneScenaAlan = new CostruzioneScenaAlan();
 

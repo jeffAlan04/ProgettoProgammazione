@@ -35,7 +35,8 @@
 
                         <!-- Intermedio Section -->
                         <AnchorPane layoutX="50.0" layoutY="200.0" prefHeight="85.0" prefWidth="650.0"
-                                    style="-fx-background-color: linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black; -fx-border-width: 1px; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+                                    style="-fx-background-color: linear-gradient(to bottom, #A5D6A7, #81C784); -fx-border-color: black;
+                                     -fx-border-width: 1px; -fx-background-radius: 10px; -fx-border-radius: 10px;">
                             <children>
                                 <Text styleClass="text-section" layoutX="20.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0"
                                       text="Intermedio"/>
@@ -56,8 +57,8 @@
                         </AnchorPane>
 
                         <!-- Indietro Button -->
-                        <Button styleClass="button-back" layoutX="50.0" layoutY="460.0" mnemonicParsing="false" onAction="#ScenaDashbord"
-                                text="Indietro"  style="-fx-background-color: red;"/>
+                        <Button styleClass="button-back" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#ScenaDashbord"
+                                text="Indietro"  style="-fx-background-color: #AA0000;"/>
                     </children>
                 </AnchorPane>
             </children>

@@ -32,6 +32,9 @@ public class EsercizioFacileA1 {
     @FXML
     private RadioButton r3;
 
+    @FXML
+    private Button helpButton;
+
 
     @FXML
     public void initialize() {
@@ -57,7 +60,7 @@ public class EsercizioFacileA1 {
         modelloEsercizioFacile.initialize(testoDomanda,
                 codeArea, r1, r2, r3, 3,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale);
+                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale, helpButton);
 
         CostruzioneScenaAlan costruzioneScenaAlan = new CostruzioneScenaAlan();
         // costruzioneScenaAlan.startProgress();

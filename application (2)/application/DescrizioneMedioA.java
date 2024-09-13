@@ -1,23 +1,21 @@
 package application;
 
-import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.ProgressBar;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 
 import java.io.IOException;
 import java.util.Objects;
 
-public class DescrizioneFacileA {
-
+public class DescrizioneMedioA {
     @FXML
     private Button nextButton;
 
@@ -28,7 +26,7 @@ public class DescrizioneFacileA {
     private Text gameRulesTextArea;
 
     @FXML
-    public void initialize() {
+    public void initialize(){
         nextButton.setOnAction(event -> {
             try {
                 apriEsercizio(event);
@@ -46,7 +44,10 @@ public class DescrizioneFacileA {
         });
 
         descrizioneRegole();
+
     }
+
+
 
 
     // Method to switch to the "Dashbord" scene
@@ -60,7 +61,7 @@ public class DescrizioneFacileA {
 
     // Method to switch to the specified next scene
     private void apriEsercizio(ActionEvent event) throws IOException {
-        Object root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EsercizioFacileA.fxml")));
+        Object root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("EsercizioMedioA1.fxml")));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene((Parent) root);
         stage.setScene(scene);
@@ -69,12 +70,12 @@ public class DescrizioneFacileA {
 
     private void descrizioneRegole() {
 
-        String regole = "In questo livello ti verrà mostrato un commento, un codice\n" +
-                "e tre opzioni.\n" +
-                "Scegli quella che ritieni più oppurtuna in modo da rendere il codice\n" +
-                "coerente con il commento.\n" +
-                "Se ti trovi in difficoltà potrai utlizzare il pulsante per i suggerimenti,\n" +
-                "ma ricorda che ti verranno assegnati solo la metà dei punti.";
+        String regole = "Compliementi, sei arrivato al livello medio! ;)\n" +
+                "Come nel livello precedente, ti verrà mostrato un commento ed un codice\n" +
+                " che però avrà una falla.\n" +
+                "Inserisci nello spazio apposito, la porzione di codice che ritieni\n" +
+                "corretta, affinché commento e codice coincidano.\n" +
+                "Ricorda che il pulsante dei suggerimenti ti assegnerà metà dei punti.";
 
         gameRulesTextArea.setText(regole);
 

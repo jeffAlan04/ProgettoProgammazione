@@ -22,57 +22,56 @@ public class EsercizioDifficileA3 {
     private Button nextButton;
 
     @FXML
+    private Button helpButton;
+
+    @FXML
     public void initialize() {
 
         String commento = "// Inversione di una stringa\n";
 
         // Codice predefinito nell'area di testo
-        String initialCode = "public class MaxMatrice {\n" +
-                "    public static void main(String[] args) {\n" +
-                "        int[][] matrice = {\n" +
-                "            {1, 2, 3},\n" +
-                "            {4, 5, 6},\n" +
-                "            {7, 8, 9}\n" +
-                "        };\n" +
-                "        int max = Integer.MIN_VALUE;\n" +
-                "        for (int i = 0; i < matrice.length; i++) {\n" +
-                "            for (int j = 0; j < matrice[i].length; j++) {\n" +
-                "                if (matrice[i][j] < max) {\n" +
-                "                    max = matrice[i][j];\n" +
-                "                }\n" +
-                "            }\n" +
-                "        }\n" +
-                "        System.out.println(\"Il massimo è: \" + max);\n" +
-                "    }\n" +
-                "}\n";
+        String initialCode = "public class Es3{\n" +
+                "\t\n" +
+                "\tpublic static void main(String[] args){\n" +
+                "\t\tint[] array1 = {1, 2, -4, -5, 10, 12, 8};\n" +
+                "        System.out.println(valoreMinore(array1, 0, 1));\n" +
+                "\t}\n" +
+                "\tpublic static int valoreMinore(int[] arr, int indexMin, int index){\n" +
+                "\t\tif (index == arr.length)\n" +
+                "\t\t\treturn index;\n" +
+                "\t\tif (arr[index] < arr[indexMin] || \n" +
+                "\t\t\t(arr[index] == arr[indexMin]&& index > indexMin)){\n" +
+                "\t\t\tindexMin = index;\n" +
+                "\t\t}\n" +
+                "\t\treturn valoreMinore(arr, indexMin, index + 1);\n" +
+                "\t}\n" +
+                "}";
 
-        String correctCode = "public class MaxMatrice {\n" +
-                "    public static void main(String[] args) {\n" +
-                "        int[][] matrice = {\n" +
-                "            {1, 2, 3},\n" +
-                "            {4, 5, 6},\n" +
-                "            {7, 8, 9}\n" +
-                "        };\n" +
-                "        int max = Integer.MIN_VALUE;\n" +
-                "        for (int i = 0; i < matrice.length; i++) {\n" +
-                "            for (int j = 0; j < matrice[i].length; j++) {\n" +
-                "                if (matrice[i][j] > max) {\n" +
-                "                    max = matrice[i][j];\n" +
-                "                }\n" +
-                "            }\n" +
-                "        }\n" +
-                "        System.out.println(\"Il massimo è: \" + max);\n" +
-                "    }\n" +
-                "}\n";
+        String correctCode = "public class Es3{\n" +
+                "\t\n" +
+                "\tpublic static void main(String[] args){\n" +
+                "\t\tint[] array1 = {1, 2, -4, -5, 10, 12, 8};\n" +
+                "        System.out.println(valoreMinore(array1, 0, 1));\n" +
+                "\t}\n" +
+                "\tpublic static int valoreMinore(int[] arr, int indexMin, int index){\n" +
+                "\t\tif (index == arr.length)\n" +
+                "\t\t\treturn indexMin;\n" +
+                "\t\tif (arr[index] < arr[indexMin] || \n" +
+                "\t\t\t(arr[index] == arr[indexMin]&& index > indexMin)){\n" +
+                "\t\t\tindexMin = index;\n" +
+                "\t\t}\n" +
+                "\t\treturn valoreMinore(arr, indexMin, index + 1);\n" +
+                "\t}\n" +
+                "}";
 
-        String prossimoLivello = "EsercizioDifficile2.fxml";
+        String prossimoLivello = "RisultatiA.fxml";
         int livelloAttuale = 2;
         int esercizioAttuale = 2;
         ModelloEsercizioDifficile modelloEsercizioDifficile = new ModelloEsercizioDifficile();
         modelloEsercizioDifficile.initialize(commento,initialCode,
                 correctCode, codeArea,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale);
+                nextButton, prossimoLivello, livelloAttuale, esercizioAttuale, helpButton);
         // Ascolta il pulsante di verifica
     }
 }

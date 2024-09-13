@@ -25,6 +25,9 @@ public class EsercizioMedioA1 {
     private TextArea rispostaUserArea;
 
     @FXML
+    private Button helpButton;
+
+    @FXML
     public void initialize() {
 
         // Codice predefinito nell'area di testo
@@ -33,14 +36,14 @@ public class EsercizioMedioA1 {
                 "    public static void main(String[] args) {\n" +
                 "        String str = \"ciao\";\n" +
                 "        String invertita = \"\";\n" +
-                "        for (int i = 0; i < str.length(); i++) {\n" +
+                "        for (------------------------) {\n" +
                 "            invertita += str.charAt(i);\n" +
                 "        }\n" +
                 "        System.out.println(\"Stringa invertita: \" + invertita);\n" +
                 "    }\n" +
                 "}\n";
 
-        String rispostaGiusta = "test";
+        String rispostaGiusta = "int i = str.length() - 1; i >= 0; i--";
 
         String prossimoLivello = "EsercizioMedioA2.fxml";
         int livelloAttuale = 1;
@@ -49,6 +52,6 @@ public class EsercizioMedioA1 {
         ModelloEsercizioMedio modelloEsercizioMedio = new ModelloEsercizioMedio();
         modelloEsercizioMedio.initialize(domanda, rispostaGiusta, codeArea,
                 verifyButton, feedbackText, esciButton,
-                nextButton, prossimoLivello, rispostaUserArea, livelloAttuale, esercizioAttuale);
+                nextButton, prossimoLivello, rispostaUserArea, livelloAttuale, esercizioAttuale, helpButton);
     }
 }

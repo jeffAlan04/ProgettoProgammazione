@@ -76,8 +76,8 @@
                             </font>
                         </RadioButton>
 
-                        <!-- Buttons below the option buttons with rounded corners -->
-                        <Button fx:id="verifyButton" layoutX="451.0" layoutY="450.0" mnemonicParsing="false"
+                        <!-- Buttons styled with green (and red for "Esci") -->
+                        <Button fx:id="verifyButton" layoutX="470.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
                                 style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
                                 text="Verifica"/>
@@ -86,6 +86,11 @@
                                 prefHeight="26.0" prefWidth="91.0"
                                 style="-fx-background-color: lightblue; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
                                 text="Next"/>
+
+                        <Button fx:id="helpButton" layoutX="340.0" layoutY="450.0" mnemonicParsing="false"
+                                prefHeight="26.0" prefWidth="91.0"
+                                style="-fx-background-color: #FEBE10; -fx-text-fill: white; -fx-background-radius: 5px; -fx-border-radius: 5px;"
+                                text="Suggerimento"/>
 
                         <Button fx:id="esciButton" layoutX="50.0" layoutY="450.0" mnemonicParsing="false"
                                 prefHeight="26.0" prefWidth="91.0"
