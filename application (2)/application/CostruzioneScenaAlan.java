@@ -131,7 +131,7 @@ public class CostruzioneScenaAlan {
                 index = i;
                 user = userList.get(i);
 
-                if (suggerimentoAttivato) user.setPunteggio(user.getPunteggio() + 10);
+                if (suggerimentoAttivato) user.setPunteggio(user.getPunteggio() + 5);
 
                 else user.setPunteggio(user.getPunteggio() + 20);
 

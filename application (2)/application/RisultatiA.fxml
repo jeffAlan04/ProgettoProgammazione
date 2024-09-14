@@ -34,7 +34,7 @@
 
                   <!-- Centered Risultati Text below Complimento Text with smaller font -->
                   <Text fx:id="risultati" fill="#388e3c" strokeType="OUTSIDE"
-                        strokeWidth="0.0" wrappingWidth="500.0" text="Risultati: 80%">
+                        strokeWidth="0.0" wrappingWidth="500.0">
                      <font>
                         <Font size="12.0"/> <!-- Smaller font size -->
                      </font>

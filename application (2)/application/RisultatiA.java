@@ -80,13 +80,16 @@ public class RisultatiA {
         String testo = "";
         for (User user : userList) {
             if (user.getUserName() != null  && user.getUserName().equals(Sessione.getUsername())) {
-             if (user.getPunteggio() <= 120)
+             if (user.getPunteggio() <= 70)
                  testo = "Puoi fare di meglio " + user.getUserName();
+             else if (user.getPunteggio() > 70 && user.getPunteggio() <= 120)
+                 testo = "Continua ad esercitarti " + user.getUserName() + ". ";
+
              else if (user.getPunteggio() > 120 && user.getPunteggio() <= 150)
                  testo = "Ci sei quasi " + user.getUserName() + ". ";
+
              else
                  testo = "Complimenti " + user.getUserName() + "!";
-                ;
 
              punteggio = "Hai realizzato: " + user.getPunteggio() + " punti su 180";
 

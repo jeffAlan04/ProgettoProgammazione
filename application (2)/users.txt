@@ -66,3 +66,9 @@ p:p
 g:g
 w:w
 l:l
+r:r
+r:r
+u:u
+f:f
+v:v
+v:v
